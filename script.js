@@ -54,3 +54,96 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // スライダーの要素を取得
+    const sliderWrapper = document.getElementById('js-slider-wrapper');
+    const slides = document.querySelectorAll('.slide-item');
+    const prevBtn = document.getElementById('js-slider-prev');
+    const nextBtn = document.getElementById('js-slider-next');
+    const dotsContainer = document.getElementById('js-slider-dots');
+    
+    // スライドが無ければ終了
+    if (!sliderWrapper || slides.length === 0) return;
+
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    let autoPlayInterval;
+
+    // インジケーター（丸い点）を生成
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        
+        // 点をクリックしたらそのスライドへ
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+            resetAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    // スライドを移動させる関数
+    function updateSlider() {
+        // 横にずらす量 (%) を計算
+        const translateX = -1 * currentIndex * 100;
+        sliderWrapper.style.transform = `translateX(${translateX}%)`;
+
+        // 点の見た目を更新
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+
+    // 指定した番号へ移動
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    // 次へ
+    function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= slideCount) {
+            currentIndex = 0;
+        }
+        updateSlider();
+    }
+
+    // 前へ
+    function prevSlide() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = slideCount - 1;
+        }
+        updateSlider();
+    }
+
+    // ボタンのイベントリスナー
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+    });
+
+    // 自動再生（5秒ごとに次へ）
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+    }
+
+    // 操作したらタイマーをリセット
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+    }
+
+    // 開始
+    startAutoPlay();
+});

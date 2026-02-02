@@ -48,6 +48,7 @@ ul {
     padding: 0 15px;
 }
 
+
 /* =========================================
    Header
    ========================================= */
@@ -423,9 +424,12 @@ ul {
 }
 
 .vehicle-img {
-    background: #ccc;
+    background: url(./image/羽前急行月山線_UZ1000形電車-V2.png);
     position: relative;
     min-height: 200px;
+    background-size: cover;      /* 枠を埋め尽くすようにリサイズ */
+    background-position: center; /* 画像の中心（電車本体）を表示 */
+    background-repeat: no-repeat;/* 繰り返し防止 */
 }
 
 @media (min-width: 600px) {
@@ -580,4 +584,145 @@ ul {
 .copyright {
     font-size: 0.75rem;
     opacity: 0.8;
+}
+
+/* =========================================
+   Hero Slider
+   ========================================= */
+.hero-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* 全幅表示 */
+    height: 400px;   /* スライダーの高さ */
+    overflow: hidden;
+    background-color: #000;
+    margin-bottom: 30px;
+}
+
+/* スマホ対応：高さを少し縮める */
+@media (max-width: 768px) {
+    .hero-slider-container {
+        height: 250px;
+    }
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* スライドのアニメーション速度 */
+}
+
+.slide-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像の比率を保ちつつ枠いっぱいにする */
+}
+
+/* 画像の上のキャプション文字 */
+.slide-caption {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+    padding: 10px 20px;
+    border-left: 5px solid var(--accent-color, #e60012); /* 赤いアクセント線 */
+}
+
+.slide-caption h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.slide-caption p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .slide-caption h2 { font-size: 1.2rem; }
+    .slide-caption p { font-size: 0.8rem; }
+    .slide-caption { bottom: 30px; left: 0; width: 100%; }
+}
+
+/* 矢印ボタン */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 51, 153, 0.7); /* 半透明の青 */
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+    border-radius: 50%; /* 丸くする */
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 51, 153, 1);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* 下の丸い点（インジケーター） */
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* =========================================
+   Main Layout (修正後)
+   ========================================= */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    gap: 30px;
+    /* 中央に配置されるように調整 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 900px) {
+    .main-layout {
+        flex-direction: row;
+        justify-content: center; /* コンテンツを中央へ */
+    }
+    .main-content {
+        /* 幅を70%から100%に変更して、右側の余白を埋める */
+        width: 100%; 
+    }
+    /* サイドバーがない場合は、.sidebar の設定は無視されます */
 }
