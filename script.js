@@ -1,36 +1,56 @@
-window.onload = function() {
-    // --- 1. アクセスカウンター (キリ番機能付き) ---
-    const counterElement = document.getElementById('counter');
+document.addEventListener('DOMContentLoaded', function() {
     
-    // ベース値 + ランダム増加
-    let count = 246800;
-    count += Math.floor(Math.random() * 50);
-    
-    counterElement.innerText = count;
+    /* =========================================
+       ハンバーガーメニュー（スマホ用）
+       ========================================= */
+    const menuBtn = document.getElementById('js-menu-btn');
+    const nav = document.getElementById('js-nav');
 
-    // キリ番判定
-    if (count % 100 === 0 || count % 11111 === 0) {
-        alert("★☆★ キリ番GETおめでとうございます！ ★☆★\nあなたは記念すべき " + count + " 人目のお客様です！\nBBSにカキコしてね！");
+    if (menuBtn && nav) {
+        menuBtn.addEventListener('click', function() {
+            // ボタンの見た目を切り替え
+            this.classList.toggle('active');
+            
+            // ナビゲーションの表示・非表示を切り替え
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        });
     }
 
-    // --- 2. ステータスバーへの文字表示 ---
-    // 最近のブラウザでは動きませんが、コードとしては残しておきます
-    try {
-        let msg = "　　　　Welcome to UZEN KYUKO RAILWAY Official Home Page...　　　　";
-        let pos = 0;
-        function scrollTitle() {
-            document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
-            pos++;
-            if (pos > msg.length) pos = 0;
-            window.setTimeout(scrollTitle, 200);
-        }
-        scrollTitle();
-    } catch(e) {}
-};
+    /* =========================================
+       スムーズスクロール
+       ========================================= */
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
 
-// --- 3. 右クリック禁止スクリプト (当時の定番) ---
-document.addEventListener('contextmenu', function(e) {
-    // 本当に禁止すると使いにくいので、alertだけ出す
-    // e.preventDefault(); 
-    // alert('画像のお持ち帰りは禁止です！！');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // ヘッダーの高さ分ずらす（固定ヘッダー対策風）
+                const headerOffset = 20; 
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+
+                // スマホメニューが開いていたら閉じる
+                if (window.innerWidth < 768 && nav.style.display === 'block') {
+                    nav.style.display = 'none';
+                    menuBtn.classList.remove('active');
+                }
+            }
+        });
+    });
 });

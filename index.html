@@ -2,243 +2,247 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>羽前急行電鉄株式会社 - Uzen Kyuko Railway Official Website -</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽前急行電鉄株式会社 - Uzen Express Railway -</title>
+    <meta name="description" content="山形と酒田を110分で結ぶ、夢の超特急。羽前急行電鉄の公式サイトです。">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div align="center">
-    <table width="850" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border: 2px solid #003366;">
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container">
+                <ul class="lang-nav">
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">SITEMAP</a></li>
+                    <li><a href="#">HOME</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-main container">
+            <div class="logo">
+                <h1>
+                    <span class="logo-text">UZEN EXPRESS RAILWAY</span>
+                    <span class="logo-sub">羽前急行電鉄株式会社</span>
+                </h1>
+                <p class="tagline">Since 1991.1.31 - 山形と酒田を110分で結ぶ、夢の超特急。</p>
+            </div>
+            <div class="header-info">
+                <a href="#" class="btn-inquiry">お問い合わせ</a>
+            </div>
+        </div>
         
-        <tr>
-            <td colspan="2" bgcolor="#003399" height="70">
-                <table width="100%" border="0">
-                    <tr>
-                        <td width="550">
-                            <h1 style="margin:5px 0 0 10px;">
-                                <font color="#FFFFFF" face="Arial Black, Impact">UZEN EXPRESS RAILWAY</font>
-                            </h1>
-                            <font color="#CCCCCC" size="2" style="margin-left:12px;">Since 1991.1.31 - 山形と酒田を110分で結ぶ、夢の超特急。</font>
-                        </td>
-                        <td align="right" valign="bottom">
-                            <font color="#FFFFFF" size="1">
-                                [ <a href="#" style="color:#FFFF00;">ENGLISH</a> ] 
-                                [ <a href="#" style="color:#FFFF00;">SITEMAP</a> ] 
-                                [ <a href="#" style="color:#FFFF00;">HOME</a> ]
-                            </font>&nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+        <button class="mobile-menu-btn" id="js-menu-btn">
+            <span></span><span></span><span></span>
+        </button>
 
-        <tr>
-            <td colspan="2" bgcolor="#EFEFEF" height="24" style="border-bottom: 1px solid #999999;">
-                <div class="marquee-container">
-                    <span class="marquee-text">
-                        <font color="#FF0000"><b>【運行情報】 1月31日 21:00現在</b></font>
-                        月山線は、大雪のため一部列車に遅れが発生していましたが、現在は平常通り運転しております。
-                        <font color="#0000FF"><b>【NEWS】</b></font>
-                        春の臨時特急「月山82号」の指定席券は来月1日より発売開始です。
-                    </span>
-                </div>
-            </td>
-        </tr>
+        <nav class="global-nav" id="js-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#">トップページ</a></li>
+                    <li><a href="#">企業情報・沿革</a></li>
+                    <li><a href="#timetable">時刻表・運賃</a></li>
+                    <li><a href="#vehicles">車両紹介 <span class="badge-new">New!</span></a></li>
+                    <li><a href="#">沿線観光ガイド</a></li>
+                    <li><a href="#">お得なきっぷ</a></li>
+                    <li><a href="#">お楽しみ・壁紙</a></li>
+                    <li><a href="#">よくあるご質問</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-        <tr>
-            <td width="190" valign="top" bgcolor="#F0F8FF" style="border-right: 1px dotted #003399; padding: 10px;">
-                
-                <div align="center">
-                    <img src="https://via.placeholder.com/170x50/003399/ffffff?text=UZEN+LOGO" alt="羽前急行ロゴ" border="0"><br><br>
-                    
-                    <table width="170" border="0" cellspacing="2" cellpadding="2">
-                        <tr><td bgcolor="#003399" align="center"><font color="#FFFFFF" size="2"><b>M E N U</b></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#">トップページ</a></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#">会社案内・沿革</a></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#timetable">時刻表・運賃</a></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#vehicles">車両紹介</a> <font color="red" size="1" class="blink">New!</font></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#">沿線観光ガイド</a></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#">お得な切符</a></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#">壁紙ダウンロード</a></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#">Q&A (よくある質問)</a></font></td></tr>
-                        <tr><td bgcolor="#DDEEFF"><font size="2">▶ <a href="#">お問い合わせ</a></font></td></tr>
-                    </table>
-                    <br>
-
-                    <table width="170" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="5">
-                        <tr>
-                            <td bgcolor="#FFFFFF" align="center">
-                                <font size="1" color="#666666"><b>社長の部屋</b></font><br>
-                                <img src="https://via.placeholder.com/60x80/cccccc/000000?text=FACE" align="left" style="margin-right:5px;">
-                                <font size="1">
-                                    安全こそが最大のサービスです。<br>
-                                    (代表取締役: 羽前 鉄男)
-                                </font>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-
-                    <font size="1"><b>Links</b></font><br>
-                    <a href="#"><img src="https://via.placeholder.com/88x31/FF9900/FFFFFF?text=Yamagata" border="0" style="margin-bottom:3px;"></a><br>
-                    <a href="#"><img src="https://via.placeholder.com/88x31/008000/FFFFFF?text=JR+East" border="0" style="margin-bottom:3px;"></a><br>
-                    <a href="#"><img src="https://via.placeholder.com/88x31/0000FF/FFFFFF?text=Hokuhoku" border="0" style="margin-bottom:3px;"></a><br>
-                    <font size="1">リンクフリーです。<br>バナーは直リンク禁止。</font>
-
-                </div>
-            </td>
-
-            <td width="660" valign="top" style="padding: 15px;">
-                
-                <font size="4" color="#003366"><b>Information</b></font>
-                <hr size="1" color="#003366">
-                
-                <div class="news-scroll">
-                    <font size="2">
-                    <dl>
-                        <dt>2026/01/30</dt><dd><img src="https://via.placeholder.com/20x10/ff0000/ffffff?text=UP" align="absmiddle"> 車両紹介ページにHK-3000系のスペックを追加しました。</dd>
-                        <dt>2026/01/15</dt><dd>湯殿山駅の「地下トンネル見学ツアー」は定員に達しました。</dd>
-                        <dt>2026/01/01</dt><dd>新年のご挨拶を申し上げます。</dd>
-                        <dt>2025/12/20</dt><dd>年末年始の特別ダイヤ（雪ダイヤ）について。</dd>
-                        <dt>2025/11/05</dt><dd>BBS（掲示板）を荒らし対策のため一時閉鎖しました。</dd>
-                        <dt>2025/10/01</dt><dd>祝！ 羽前急行月山線 開業！！</dd>
-                    </dl>
-                    </font>
-                </div>
-                <br>
-
-                <a name="timetable"></a>
-                <table width="100%" border="0" cellspacing="0" cellpadding="2">
-                    <tr>
-                        <td bgcolor="#003399"><font color="#FFFFFF"><b>■ 主要区間 運賃・料金表 (普通運賃小児料金)</b></font></td>
-                    </tr>
-                </table>
-                <br>
-                <div align="center">
-                    <table class="fare-table" width="90%" border="1" cellspacing="0" cellpadding="5" bordercolor="#999999">
-                        <tr bgcolor="#EEEEEE" align="center">
-                            <td><font size="2"><b>距離</b></font></td>
-                            <td><font size="2"><b>大人運賃</b></font></td>
-                            <td><font size="2"><b>小児運賃</b></font></td>
-                        </tr>
-                        <tr align="center">
-                            <td align="left"><font size="2">- 20km</font></td>
-                            <td><font size="2">250円</font></td>
-                            <td><font size="2">1,200円</font></td>
-                        </tr>
-                        <tr align="center">
-                            <td align="left"><font size="2">20km - 40km</font></td>
-                            <td><font size="2">500円</font></td>
-                            <td><font size="2">850円</font></td>
-                        </tr>
-                        <tr align="center">
-                            <td align="left"><font size="2">40km - 60km</font></td>
-                            <td><font size="2">750円</font></td>
-                            <td><font size="2">950円</font></td>
-                        </tr>
-                        <tr align="center">
-                            <td align="left"><font size="2">60km - 80km</font></td>
-                            <td><font size="2">1,000円</font></td>
-                            <td><font size="2">950円</font></td>
-                        </tr>
-                        <tr align="center">
-                            <td align="left"><font size="2">80km -</font></td>
-                            <td><font size="2">1,250円</font></td>
-                            <td><font size="2">950円</font></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <font size="1">※小児は半額です。指定席は通常期+530円となります。</font>
-                </div>
-                
-                <br><br>
-
-                <a name="vehicles"></a>
-                <table width="100%" border="0" cellspacing="0" cellpadding="2">
-                    <tr>
-                        <td bgcolor="#003399"><font color="#FFFFFF"><b>■ 営業用車両の性能について</b></font></td>
-                    </tr>
-                </table>
-                <br>
-                <table width="100%" border="0">
-                    <tr>
-                        <td width="200" valign="top">
-                            <img src="https://via.placeholder.com/180x120/CCCCCC/003399?text=Type+HK-3000" style="border:1px solid #000;">
-                            <br>
-                            <font size="1" color="#003399">▲UZ-1000系</font>
-                        </td>
-                        <td valign="top">
-                            <font size="2">
-                                <b>【UZ1000系 普通交流電車】</b><br>
-                                月山線の主力車両です。配席位置は、座席定員の確保と乗客の移動の容易さを考慮し、セミクロスシートとしました。また熱線吸収ブロンズガラスの採用により、客室内の遮光性と冷房効果の向上を図っています。UZ1000形の一番の特徴は最高速度120㎞/ｈで走る高速性能です。速達性を高めるため、特に加減速性能を高くしており、地方のローカル電車としてはかなりの高性能電車で、また日本有数の豪雪地帯を運行するため耐寒耐雪設計となっております。<br><br>
-                                <table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="2" class="spec-table">
-                                    <tr bgcolor="#F0F8FF">
-                                        <td width="30%">最高運転速度</td><td>120 km/h (設計最高速度 160km/h)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>主電動機出力</td><td>150kW × 4 /両(M車)</td>
-                                    </tr>
-                                    <tr bgcolor="#F0F8FF">
-                                        <td>制御方式</td><td>VVVFインバータ制御 (IGBT)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>編成定員</td><td>61名/133名 (1両編成)</td>
-                                    </tr>
-                                </table>
-                            </font>
-                            <br>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="200" valign="top">
-                            <img src="https://via.placeholder.com/180x120/CCCCCC/003399?text=Type+HK-3000" style="border:1px solid #000;">
-                            <br>
-                            <font size="1" color="#003399">▲HK-2000系 (特急月山)</font>
-                        </td>
-                        <td valign="top">
-                            <font size="2">
-                                <b>【UZ2000系 特急形交流電車】</b><br>
-                                開業当初から活躍する、月山線の特急用車両です。豪雪地帯を最高速度160km/hで走行するため、強力なモーターと耐雪ブレーキを装備しています。基本編成6両+付属編成3両の連結とし、各々の連結部には運転台を持ち、普段は通路を貫通させ乗客が通り抜けできるような貫通構造としています。<br><br>
-                                <table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="2" class="spec-table">
-                                    <tr bgcolor="#F0F8FF">
-                                        <td width="30%">最高運転速度</td><td>160 km/h (設計最高速度 170km/h)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>主電動機出力</td><td>185kW × 4 /両(M車)</td>
-                                    </tr>
-                                    <tr bgcolor="#F0F8FF">
-                                        <td>制御方式</td><td>VVVFインバータ制御 (GTO)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>編成定員</td><td>61名/133名 (1両編成)</td>
-                                    </tr>
-                                </table>
-                            </font>
-                    </tr>
-                </table>
-
-                <br>
-                <hr size="1" color="#CCCCCC">
-                <br>
-
-
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2" bgcolor="#003399" align="center" height="50">
-                <font color="#FFFFFF" size="1">
-                    Copyright &copy; 2025-2026 Uzen Express Railway All Rights Reserved.<br>
-                    当サイト内の画像・文章の無断転載を禁じます。
-                </font>
-            </td>
-        </tr>
-    </table>
+    <div class="alert-bar">
+        <div class="container alert-content">
+            <div class="alert-label">運行情報</div>
+            <div class="alert-text">
+                <span class="time">1月31日 21:00現在</span>
+                <span class="status">月山線は、大雪のため一部列車に遅れが発生していましたが、現在は平常通り運転しております。</span>
+            </div>
+        </div>
+    </div>
     
-    <br>
-</div>
+    <div class="news-ticker">
+        <div class="container ticker-wrap">
+            <span class="ticker-label">NEWS</span>
+            <div class="ticker-item">春の臨時特急「月山82号」の指定席券は来月1日より発売開始いたします。</div>
+        </div>
+    </div>
 
-<script src="script.js"></script>
+    <div class="container main-layout">
+        <main class="main-content">
+            
+            <section class="section news-section">
+                <h2 class="section-title">新着情報</h2>
+                <div class="news-list">
+                    <dl>
+                        <dt>2026/01/30</dt>
+                        <dd>
+                            <span class="badge-update">更新</span>
+                            <a href="#vehicles">車両紹介ページにHK-3000系のスペックを追加しました。</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>2026/01/15</dt>
+                        <dd>湯殿山駅「地下トンネル見学ツアー」は定員に達したため受付を終了しました。</dd>
+                    </dl>
+                    <dl>
+                        <dt>2026/01/01</dt>
+                        <dd>新年のご挨拶を申し上げます。</dd>
+                    </dl>
+                    <dl>
+                        <dt>2025/12/20</dt>
+                        <dd>年末年始の特別ダイヤ（雪ダイヤ）による運行について。</dd>
+                    </dl>
+                    <dl>
+                        <dt>2025/11/05</dt>
+                        <dd>【重要】コミュニティ掲示板（BBS）のサービス休止について。</dd>
+                    </dl>
+                    <dl>
+                        <dt>2025/10/01</dt>
+                        <dd>祝！ 羽前急行月山線 開業！！</dd>
+                    </dl>
+                </div>
+            </section>
+
+            <section id="timetable" class="section fare-section">
+                <h2 class="section-title">主要区間 運賃・料金表</h2>
+                <p class="section-lead">普通運賃および小児料金のご案内です。</p>
+                
+                <div class="table-scroll">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>営業キロ</th>
+                                <th>大人運賃</th>
+                                <th>小児運賃</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>- 20km</td>
+                                <td>250円</td>
+                                <td>120円</td> </tr>
+                            <tr>
+                                <td>20km - 40km</td>
+                                <td>500円</td>
+                                <td>850円</td> </tr>
+                            <tr>
+                                <td>40km - 60km</td>
+                                <td>750円</td>
+                                <td>950円</td>
+                            </tr>
+                            <tr>
+                                <td>60km - 80km</td>
+                                <td>1,000円</td>
+                                <td>950円</td>
+                            </tr>
+                            <tr>
+                                <td>80km -</td>
+                                <td>1,250円</td>
+                                <td>950円</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="note-list">
+                    <li>※小児運賃は大人運賃の半額です（10円未満切り上げ）。</li>
+                    <li>※上記表の小児運賃等の金額は、現行の届出運賃に基づきます。</li>
+                    <li>※指定席をご利用の場合は、通常期で運賃に加えて530円が必要です。</li>
+                </ul>
+            </section>
+
+            <section id="vehicles" class="section vehicle-section">
+                <h2 class="section-title">車両紹介・性能について</h2>
+                
+                <article class="vehicle-card">
+                    <div class="vehicle-img">
+                        <img src="https://via.placeholder.com/600x400/CCCCCC/003399?text=Type+UZ-1000" alt="UZ-1000系車両">
+                        <div class="vehicle-name">UZ-1000系</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>UZ-1000系（普通交流電車）</h3>
+                        <p class="vehicle-desc">
+                            月山線の主力車両です。座席定員の確保とスムーズな乗降を考慮し、セミクロスシートを採用しました。
+                            熱線吸収ブロンズガラスにより、遮光性と冷房効果を向上させています。
+                            最大の特徴は、ローカル線としては異例の最高速度120km/hでの走行性能です。
+                            日本有数の豪雪地帯に対応した耐寒耐雪設計に加え、高い加減速性能で地域の速達性を支えています。
+                        </p>
+                        <table class="spec-table">
+                            <tbody>
+                                <tr><th>最高運転速度</th><td>120 km/h (設計最高速度 160km/h)</td></tr>
+                                <tr><th>主電動機出力</th><td>150kW × 4 /両(M車)</td></tr>
+                                <tr><th>制御方式</th><td>VVVFインバータ制御 (IGBT)</td></tr>
+                                <tr><th>編成定員</th><td>61名/133名 (1両編成)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="vehicle-card">
+                    <div class="vehicle-img">
+                        <img src="https://via.placeholder.com/600x400/111111/FFFFFF?text=Type+HK-2000" alt="HK-2000系 特急月山">
+                        <div class="vehicle-name">HK-2000系</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>HK-2000系（特急形交流電車 / 特急月山）</h3>
+                        <p class="vehicle-desc">
+                            開業当初から活躍する、月山線のフラッグシップ車両です。
+                            豪雪地帯を最高速度160km/hで駆け抜けるため、強力なモーターと特殊な耐雪ブレーキを装備しています。
+                            基本編成6両＋付属編成3両での運用に対応し、各連結部には運転台を備えています。
+                            通常時は貫通構造となっており、お客様は編成間を通り抜けることが可能です。
+                        </p>
+                        <table class="spec-table">
+                            <tbody>
+                                <tr><th>最高運転速度</th><td>160 km/h (設計最高速度 170km/h)</td></tr>
+                                <tr><th>主電動機出力</th><td>185kW × 4 /両(M車)</td></tr>
+                                <tr><th>制御方式</th><td>VVVFインバータ制御 (GTO)</td></tr>
+                                <tr><th>編成定員</th><td>61名/133名 (1両編成)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-box president-box">
+                <h3 class="sidebar-title">トップメッセージ</h3>
+                <div class="president-content">
+                    <img src="https://via.placeholder.com/120x150/eeeeee/333333?text=CEO" alt="代表取締役 羽前鉄男" class="president-img">
+                    <div class="president-text">
+                        <p class="quote">「安全こそが、<br>最大のサービスです。」</p>
+                        <p class="name">代表取締役<br>羽前 鉄男</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-box link-box">
+                <h3 class="sidebar-title">関連リンク</h3>
+                <ul class="banner-list">
+                    <li><a href="#"><img src="https://via.placeholder.com/280x80/FF9900/FFFFFF?text=Yamagata+Pref." alt="山形県観光情報"></a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/280x80/008000/FFFFFF?text=JR+East" alt="JR東日本"></a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/280x80/0000FF/FFFFFF?text=Hokuhoku" alt="北越急行"></a></li>
+                </ul>
+                <p class="link-note">当サイトへのリンクは自由です。</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">会社概要</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイト利用規約</a>
+            </div>
+            <p class="copyright">Copyright &copy; 2025-2026 Uzen Express Railway All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
