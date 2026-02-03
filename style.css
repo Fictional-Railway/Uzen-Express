@@ -744,3 +744,128 @@ ul {
         font-size: 0.9rem;
     }
 }
+
+/* =========================================
+   Monster Timetable Styles (Updated)
+   ========================================= */
+
+.table-scroll-wrapper {
+    overflow-x: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    /* スクロールバーを見やすく */
+    scrollbar-width: auto;
+    scrollbar-color: var(--primary-color) #f0f0f0;
+    box-shadow: inset -5px 0 5px rgba(0,0,0,0.05); /* 右側に影をつけてスクロール示唆 */
+}
+
+/* 巨大テーブルの設定 */
+.monster-table {
+    width: max-content; /* 中身に合わせて幅を自動拡張 */
+    border-collapse: separate; /* Sticky Header/Col に必須 */
+    border-spacing: 0;
+}
+
+.monster-table th, 
+.monster-table td {
+    padding: 6px 8px; /* 少し詰める */
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.8rem;
+    min-width: 50px; /* セルの最小幅 */
+}
+
+/* ヘッダーデザイン */
+.monster-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-weight: bold;
+    color: #fff;
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* 羽前エリアのヘッダー色 */
+.uzen-area {
+    background-color: var(--primary-color);
+}
+
+/* 国鉄エリアのヘッダー色（国鉄グリーン） */
+.jr-area {
+    background-color: #2e8b57;
+    border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+/* エリア境界線 */
+.border-right {
+    border-right: 3px solid #666 !important;
+}
+
+/* ▼ Sticky Column（左端固定）の設定 ▼ */
+.sticky-col {
+    position: sticky;
+    left: 0;
+    z-index: 200 !important; /* ヘッダーよりさらに上 */
+    background-color: #fff;
+    border-right: 2px solid #333 !important;
+    width: 120px;
+    min-width: 120px;
+}
+
+/* 左上角のヘッダー固定 */
+.monster-table thead th.sticky-col {
+    background-color: #333; /* ここだけ黒っぽく */
+    z-index: 300 !important; /* 最前面 */
+}
+
+/* 特急行の強調 */
+.type-ltd td {
+    background-color: #fff5f5;
+}
+.type-ltd .sticky-col {
+    background-color: #ffe0e0; /* 固定列も色付け */
+    color: var(--accent-color);
+}
+
+/* 国鉄直通行の強調 */
+.type-local-through td {
+    background-color: #f0fff4;
+}
+.type-local-through .sticky-col {
+    background-color: #dcfce7;
+    color: #006400;
+}
+
+/* 運行なし区間（グレーアウト） */
+.no-service {
+    background-color: #eee;
+    background-image: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 50%, #ddd 50%, #ddd 75%, transparent 75%, transparent);
+    background-size: 10px 10px;
+}
+
+.tab-btn {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.tab-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}

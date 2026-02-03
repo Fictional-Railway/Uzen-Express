@@ -167,3 +167,53 @@ document.addEventListener('DOMContentLoaded', function() {
         timeElement.textContent = formattedDate;
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 現在の日時を取得
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1; // 月は0から始まるので+1
+    const day = now.getDate();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+    // フォーマットを作成
+    const formattedDate = `最終更新: ${year}年${month}月${day}日 ${hours}:${formattedMinutes}`;
+    // HTMLに反映
+    const updateElement = document.getElementById('last-update');
+    if (updateElement) {
+        updateElement.textContent = formattedDate;
+    }
+});
+
+
+// ▼▼▼ 以下を script.js の最後（DOMContentLoadedの中）に追加 ▼▼▼
+
+    // 時刻表タブの切り替え機能
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.timetable-content');
+
+    if (tabBtns.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // すべてのボタンからactiveを外す
+                tabBtns.forEach(b => b.classList.remove('active'));
+                // クリックされたボタンにactiveをつける
+                btn.classList.add('active');
+
+                // ターゲットとなるIDを取得
+                const targetId = btn.getAttribute('data-target');
+
+                // すべてのコンテンツを非表示にする
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // ターゲットだけ表示する
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }

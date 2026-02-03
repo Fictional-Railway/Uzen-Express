@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>羽前急行電鉄株式会社 - Uzen Express Railway -</title>
+    <title>羽前急行 - Uzen Express Railway -</title>
     <meta name="description" content="山形と酒田を110分で結ぶ、夢の超特急。羽前急行電鉄の公式サイトです。">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
             <div class="logo">
                 <h1>
                     <span class="logo-text">UZEN EXPRESS RAILWAY</span>
-                    <span class="logo-sub">羽前急行電鉄株式会社</span>
+                    <span class="logo-sub">羽前急行電鉄</span>
                 </h1>
                 <p class="tagline">Since 1996.1.31 - 山形と酒田を110分で結ぶ、夢の超特急。</p>
             </div>
@@ -63,17 +63,17 @@
             </div>
         </div>
         <div class="slide-item">
-            <img src="https://via.placeholder.com/1200x500/DDDDDD/003399?text=New+Express+Train" alt="新型特急車両">
+            <img src="https://via.placeholder.com/1200x500/DDDDDD/003399?text=New+Express+Train" alt="準備中">
             <div class="slide-caption">
-                <h2>快適な移動空間をあなたに。</h2>
-                <p>特急山形・秋田用</p>
+                <h2>準備中</h2>
+                <p>準備中</p>
             </div>
         </div>
         <div class="slide-item">
-            <img src="https://via.placeholder.com/1200x500/e60012/FFFFFF?text=Safe+Travel" alt="安全確認">
+            <img src="https://via.placeholder.com/1200x500/e60012/FFFFFF?text=Safe+Travel" alt="準備中">
             <div class="slide-caption">
-                <h2>安全こそが、最大のサービスです。</h2>
-                <p>羽前急行電鉄株式会社</p>
+                <h2>準備中</h2>
+                <p>準備中</p>
             </div>
         </div>
     </div>
@@ -88,7 +88,7 @@
         <main class="main-content">
 
     <section class="section">
-            <h2 class="section-title">運行情報</h2>
+            <h2 class="section-title">現在の運行情報</h2>
             <div class="alert-box">
                 <div>
                     <p>普通列車</p>
@@ -103,8 +103,244 @@
                     <img src="./icon/ico_side_normal.svg" alt="">
                 </div>
             </div>
+            <p><a href="#">遅延証明書 ＞</a></p>
+            <p id="last-update">最終更新: 更新が正常に行われませんでした。</p>
+            
     </section>
 
+    <section id="timetable-search-area" class="section search-section">
+    <h2 class="section-title">時刻表</h2>
+
+    <div class="timetable-tabs">
+        <button class="tab-btn active" data-target="down-line">
+            <span class="dir-label">下り</span>
+            <span class="dir-text">酒田・秋田 方面<br><small>(全駅・全列車掲載)</small></span>
+        </button>
+        <button class="tab-btn" data-target="up-line">
+            <span class="dir-label">上り</span>
+            <span class="dir-text">山形 方面<br><small>(準備中)</small></span>
+        </button>
+    </div>
+
+    <div id="down-line" class="timetable-content active">
+        <div class="table-scroll-wrapper">
+            <table class="timetable-grid full-stations monster-table">
+                <thead>
+                    <tr>
+                        <th class="sticky-col box-header">列車種別<br>行先</th>
+                        
+                        <th class="uzen-area">山形</th>
+                        <th class="uzen-area">北山形</th>
+                        <th class="uzen-area">寒河江</th>
+                        <th class="uzen-area">西川</th>
+                        <th class="uzen-area">月山沢</th>
+                        <th class="uzen-area">湯殿山</th>
+                        <th class="uzen-area">鶴岡</th>
+                        <th class="uzen-area">余目</th>
+                        <th class="uzen-area border-right">酒田</th>
+
+                        <th class="jr-area">本楯</th>
+                        <th class="jr-area">南鳥海</th>
+                        <th class="jr-area">遊佐</th>
+                        <th class="jr-area">吹浦</th>
+                        <th class="jr-area">女鹿</th>
+                        <th class="jr-area">小砂川</th>
+                        <th class="jr-area">上浜</th>
+                        <th class="jr-area">象潟</th>
+                        <th class="jr-area">金浦</th>
+                        <th class="jr-area">仁賀保</th>
+                        <th class="jr-area">西目</th>
+                        <th class="jr-area">羽後<br>本荘</th>
+                        <th class="jr-area">羽後<br>岩谷</th>
+                        <th class="jr-area">折渡</th>
+                        <th class="jr-area">羽後<br>亀田</th>
+                        <th class="jr-area">岩城<br>みなと</th>
+                        <th class="jr-area">桂根</th>
+                        <th class="jr-area">新屋</th>
+                        <th class="jr-area">羽後<br>牛島</th>
+                        <th class="jr-area">秋田</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>05:30</td><td>05:34</td><td>05:45</td><td>05:55</td><td>06:08</td><td>06:18</td><td>06:38</td><td>06:49</td><td>06:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>06:10</td><td>06:14</td><td>06:25</td><td>06:35</td><td>06:48</td><td>06:58</td><td>07:18</td><td>07:29</td><td>07:35</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    
+                    <tr class="type-local-through">
+                        <td class="sticky-col"><span class="badge local-express">普通</span> <strong>仁賀保</strong></td>
+                        <td>06:30</td><td>06:34</td><td>06:45</td><td>06:55</td><td>07:08</td><td>07:18</td><td>07:38</td><td>07:49</td><td>08:00</td>
+                        <td>08:06</td><td>08:09</td><td>08:14</td><td>08:20</td><td>08:24</td><td>08:29</td><td>08:34</td><td>08:40</td><td>08:46</td><td>08:52</td>
+                        <td class="no-service" colspan="10"></td>
+                    </tr>
+
+                    <tr class="type-ltd">
+                        <td class="sticky-col"><span class="badge ltd">特急</span> <strong>あきた1号</strong></td>
+                        <td>07:00</td><td>↓</td><td>07:14</td><td>↓</td><td>07:35</td><td>↓</td><td>07:55</td><td>↓</td><td>08:12</td>
+                        <td>↓</td><td>↓</td><td>08:22</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>08:38</td><td>↓</td><td>08:48</td><td>↓</td><td>08:58</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>09:30</td>
+                    </tr>
+
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>07:20</td><td>07:24</td><td>07:35</td><td>07:45</td><td>07:58</td><td>08:08</td><td>08:28</td><td>08:39</td><td>08:45</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>07:50</td><td>07:54</td><td>08:05</td><td>08:15</td><td>08:28</td><td>08:38</td><td>08:58</td><td>09:09</td><td>09:15</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>08:30</td><td>08:34</td><td>08:45</td><td>08:55</td><td>09:08</td><td>09:18</td><td>09:38</td><td>09:49</td><td>09:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+
+                    <tr class="type-ltd">
+                        <td class="sticky-col"><span class="badge ltd">特急</span> <strong>あきた3号</strong></td>
+                        <td>09:00</td><td>↓</td><td>09:14</td><td>↓</td><td>09:35</td><td>↓</td><td>09:55</td><td>↓</td><td>10:12</td>
+                        <td>↓</td><td>↓</td><td>10:22</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>10:38</td><td>↓</td><td>10:48</td><td>↓</td><td>10:58</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>11:30</td>
+                    </tr>
+
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>09:30</td><td>09:34</td><td>09:45</td><td>09:55</td><td>10:08</td><td>10:18</td><td>10:38</td><td>10:49</td><td>10:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                     <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>10:30</td><td>10:34</td><td>10:45</td><td>10:55</td><td>11:08</td><td>11:18</td><td>11:38</td><td>11:49</td><td>11:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+
+                    <tr class="type-ltd">
+                        <td class="sticky-col"><span class="badge ltd">特急</span> <strong>あきた5号</strong></td>
+                        <td>11:00</td><td>↓</td><td>11:14</td><td>↓</td><td>11:35</td><td>↓</td><td>11:55</td><td>↓</td><td>12:12</td>
+                        <td>↓</td><td>↓</td><td>12:22</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>12:38</td><td>↓</td><td>12:48</td><td>↓</td><td>12:58</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>13:30</td>
+                    </tr>
+
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>11:30</td><td>11:34</td><td>11:45</td><td>11:55</td><td>12:08</td><td>12:18</td><td>12:38</td><td>12:49</td><td>12:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>12:30</td><td>12:34</td><td>12:45</td><td>12:55</td><td>13:08</td><td>13:18</td><td>13:38</td><td>13:49</td><td>13:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+
+                    <tr class="type-ltd">
+                        <td class="sticky-col"><span class="badge ltd">特急</span> <strong>あきた7号</strong></td>
+                        <td>13:00</td><td>↓</td><td>13:14</td><td>↓</td><td>13:35</td><td>↓</td><td>13:55</td><td>↓</td><td>14:12</td>
+                        <td>↓</td><td>↓</td><td>14:22</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>14:38</td><td>↓</td><td>14:48</td><td>↓</td><td>14:58</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>15:30</td>
+                    </tr>
+                    
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>13:30</td><td>13:34</td><td>13:45</td><td>13:55</td><td>14:08</td><td>14:18</td><td>14:38</td><td>14:49</td><td>14:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>14:30</td><td>14:34</td><td>14:45</td><td>14:55</td><td>15:08</td><td>15:18</td><td>15:38</td><td>15:49</td><td>15:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+
+                    <tr class="type-ltd">
+                        <td class="sticky-col"><span class="badge ltd">特急</span> <strong>あきた9号</strong></td>
+                        <td>15:00</td><td>↓</td><td>15:14</td><td>↓</td><td>15:35</td><td>↓</td><td>15:55</td><td>↓</td><td>16:12</td>
+                        <td>↓</td><td>↓</td><td>16:22</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>16:38</td><td>↓</td><td>16:48</td><td>↓</td><td>16:58</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>17:30</td>
+                    </tr>
+
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>15:30</td><td>15:34</td><td>15:45</td><td>15:55</td><td>16:08</td><td>16:18</td><td>16:38</td><td>16:49</td><td>16:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>16:15</td><td>16:19</td><td>16:30</td><td>16:40</td><td>16:53</td><td>17:03</td><td>17:23</td><td>17:34</td><td>17:40</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+
+                    <tr class="type-local-through">
+                        <td class="sticky-col"><span class="badge local-express">普通</span> <strong>仁賀保</strong></td>
+                        <td>16:45</td><td>16:49</td><td>17:00</td><td>17:10</td><td>17:23</td><td>17:33</td><td>17:53</td><td>18:04</td><td>18:10</td>
+                        <td>18:16</td><td>18:19</td><td>18:24</td><td>18:30</td><td>18:34</td><td>18:39</td><td>18:44</td><td>18:50</td><td>18:56</td><td>19:02</td>
+                        <td class="no-service" colspan="10"></td>
+                    </tr>
+
+                    <tr class="type-ltd">
+                        <td class="sticky-col"><span class="badge ltd">特急</span> <strong>あきた11号</strong></td>
+                        <td>17:00</td><td>↓</td><td>17:14</td><td>↓</td><td>17:35</td><td>↓</td><td>17:55</td><td>↓</td><td>18:12</td>
+                        <td>↓</td><td>↓</td><td>18:22</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>18:38</td><td>↓</td><td>18:48</td><td>↓</td><td>18:58</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>19:30</td>
+                    </tr>
+
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>17:20</td><td>17:24</td><td>17:35</td><td>17:45</td><td>17:58</td><td>18:08</td><td>18:28</td><td>18:39</td><td>18:45</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>17:50</td><td>17:54</td><td>18:05</td><td>18:15</td><td>18:28</td><td>18:38</td><td>18:58</td><td>19:09</td><td>19:15</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>18:15</td><td>18:19</td><td>18:30</td><td>18:40</td><td>18:53</td><td>19:03</td><td>19:23</td><td>19:34</td><td>19:40</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>18:45</td><td>18:49</td><td>19:00</td><td>19:10</td><td>19:23</td><td>19:33</td><td>19:53</td><td>20:04</td><td>20:10</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+
+                    <tr class="type-ltd">
+                        <td class="sticky-col"><span class="badge ltd">特急</span> <strong>あきた13号</strong></td>
+                        <td>19:00</td><td>↓</td><td>19:14</td><td>↓</td><td>19:35</td><td>↓</td><td>19:55</td><td>↓</td><td>20:12</td>
+                        <td>↓</td><td>↓</td><td>20:22</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>20:38</td><td>↓</td><td>20:48</td><td>↓</td><td>20:58</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>↓</td><td>21:30</td>
+                    </tr>
+
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>19:30</td><td>19:34</td><td>19:45</td><td>19:55</td><td>20:08</td><td>20:18</td><td>20:38</td><td>20:49</td><td>20:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>20:30</td><td>20:34</td><td>20:45</td><td>20:55</td><td>21:08</td><td>21:18</td><td>21:38</td><td>21:49</td><td>21:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>21:30</td><td>21:34</td><td>21:45</td><td>21:55</td><td>22:08</td><td>22:18</td><td>22:38</td><td>22:49</td><td>22:55</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                    <tr class="type-local">
+                        <td class="sticky-col"><span class="badge local">普通</span> 酒田</td>
+                        <td>22:00</td><td>22:04</td><td>22:15</td><td>22:25</td><td>22:38</td><td>22:48</td><td>23:08</td><td>23:19</td><td>23:25</td>
+                        <td class="no-service" colspan="20"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="note-text">※酒田駅での停車時間は列車により異なります。<br>※国鉄線内（本楯〜秋田）は、強風により遅れ・運休が発生しやすい区間です。運行情報にご注意ください。</p>
+    </div>
+
+    <div id="up-line" class="timetable-content">
+        <p style="text-align:center; padding:30px;">上り線時刻表は現在調整中です。</p>
+    </div>
+</section>
             
             <section class="section news-section">
                 <h2 class="section-title">新着情報</h2>
@@ -112,7 +348,7 @@
                     <dl>
                         <dt>2026/01/30</dt>
                         <dd>
-                            車両紹介ページにHK2000系のスペックを追加しました。
+                            車両紹介ページにUZ-2000系のスペックを追加しました。
                         </dd>
                     </dl>
                     <dl>
@@ -129,6 +365,8 @@
                     </dl>
                 </div>
             </section>
+
+
 
             <section id="timetable" class="section fare-section">
                 <h2 class="section-title">主要区間 運賃・料金表</h2>
