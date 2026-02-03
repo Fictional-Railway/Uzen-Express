@@ -147,3 +147,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // 開始
     startAutoPlay();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 現在の日時を取得
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1; // 月は0から始まるので+1
+    const day = now.getDate();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+
+    // フォーマットを作成
+    const formattedDate = `${month}月${day}日 ${hours}:${formattedMinutes}現在`;
+    // HTMLに反映
+    const timeElement = document.getElementById('js-current-time');
+
+    if (timeElement) {
+        timeElement.textContent = formattedDate;
+    }
+});
