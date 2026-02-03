@@ -1,12 +1,9 @@
 @charset "UTF-8";
 
-/* =========================================
-   Variables & Reset
-   ========================================= */
 :root {
-    --primary-color: #004098; /* 信頼感のある深い青 */
-    --accent-color: #e60012;  /* 緊急・強調の赤 */
-    --bg-color: #f4f8fb;      /* 雪のような薄い青白い背景 */
+    --primary-color: #004098; 
+    --accent-color: #e60012;  
+    --bg-color: #f4f8fb;      
     --text-color: #333333;
     --border-color: #dde2e6;
     --white: #ffffff;
@@ -49,9 +46,6 @@ ul {
 }
 
 
-/* =========================================
-   Header
-   ========================================= */
 .site-header {
     background-color: var(--white);
     border-bottom: 4px solid var(--primary-color);
@@ -126,7 +120,7 @@ ul {
 .global-nav {
     background-color: var(--primary-color);
     width: 100%;
-    display: none; /* Mobile hidden controlled by JS */
+    display: none; 
 }
 
 @media (min-width: 768px) {
@@ -182,7 +176,6 @@ ul {
     50% { opacity: 0.3; }
 }
 
-/* Mobile Menu Button */
 .mobile-menu-btn {
     display: block;
     position: absolute;
@@ -219,9 +212,6 @@ ul {
 .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
 .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg); bottom: 11px; }
 
-/* =========================================
-   Alert & Ticker
-   ========================================= */
 .alert-bar {
     background-color: #fff0f0;
     border-bottom: 1px solid var(--accent-color);
@@ -281,9 +271,6 @@ ul {
     margin-right: 15px;
 }
 
-/* =========================================
-   Main Layout
-   ========================================= */
 .main-layout {
     display: flex;
     flex-direction: column;
@@ -304,9 +291,6 @@ ul {
     }
 }
 
-/* =========================================
-   Sections
-   ========================================= */
 .section {
     margin-bottom: 50px;
     background: var(--white);
@@ -342,7 +326,7 @@ ul {
 .news-list dt {
     width: 100%;
     font-weight: bold;
-    font-family: monospace, serif; /* 日付っぽさ */
+    font-family: monospace, serif; 
     color: #666;
     margin-bottom: 5px;
 }
@@ -427,9 +411,18 @@ ul {
     background: url(./image/羽前急行月山線_UZ1000形電車-V2.png);
     position: relative;
     min-height: 200px;
-    background-size: cover;      /* 枠を埋め尽くすようにリサイズ */
-    background-position: center; /* 画像の中心（電車本体）を表示 */
-    background-repeat: no-repeat;/* 繰り返し防止 */
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.vehicle-img2 {
+    background: url(./image/羽前急行月山線_UZ2000形電車-臨特月山.png);
+    position: relative;
+    min-height: 200px;
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 600px) {
@@ -493,9 +486,7 @@ ul {
     color: var(--primary-color);
 }
 
-/* =========================================
-   Sidebar
-   ========================================= */
+
 .sidebar-box {
     background: var(--white);
     border: 1px solid var(--border-color);
@@ -560,9 +551,6 @@ ul {
     margin-top: 10px;
 }
 
-/* =========================================
-   Footer
-   ========================================= */
 .site-footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -586,14 +574,11 @@ ul {
     opacity: 0.8;
 }
 
-/* =========================================
-   Hero Slider
-   ========================================= */
 .hero-slider-container {
     position: relative;
     width: 100%;
-    max-width: 100%; /* 全幅表示 */
-    height: 400px;   /* スライダーの高さ */
+    max-width: 100%;
+    height: 400px;  
     overflow: hidden;
     background-color: #000;
     margin-bottom: 30px;
@@ -610,7 +595,7 @@ ul {
     display: flex;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out; /* スライドのアニメーション速度 */
+    transition: transform 0.5s ease-in-out; 
 }
 
 .slide-item {
@@ -622,10 +607,10 @@ ul {
 .slide-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 画像の比率を保ちつつ枠いっぱいにする */
+    object-fit: cover; 
 }
 
-/* 画像の上のキャプション文字 */
+
 .slide-caption {
     position: absolute;
     bottom: 40px;
@@ -634,7 +619,7 @@ ul {
     text-shadow: 0 2px 4px rgba(0,0,0,0.7);
     background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
     padding: 10px 20px;
-    border-left: 5px solid var(--accent-color, #e60012); /* 赤いアクセント線 */
+    border-left: 5px solid var(--accent-color, #e60012); 
 }
 
 .slide-caption h2 {
@@ -653,12 +638,11 @@ ul {
     .slide-caption { bottom: 30px; left: 0; width: 100%; }
 }
 
-/* 矢印ボタン */
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 51, 153, 0.7); /* 半透明の青 */
+    background-color: rgba(0, 51, 153, 0.7); 
     color: #fff;
     border: none;
     width: 50px;
@@ -667,7 +651,7 @@ ul {
     cursor: pointer;
     z-index: 10;
     transition: background-color 0.3s;
-    border-radius: 50%; /* 丸くする */
+    border-radius: 50%; 
 }
 
 .slider-btn:hover {
@@ -677,7 +661,6 @@ ul {
 .prev { left: 20px; }
 .next { right: 20px; }
 
-/* 下の丸い点（インジケーター） */
 .slider-dots {
     position: absolute;
     bottom: 15px;
@@ -701,16 +684,12 @@ ul {
     transform: scale(1.2);
 }
 
-/* =========================================
-   Main Layout (修正後)
-   ========================================= */
 .main-layout {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
     padding-bottom: 50px;
     gap: 30px;
-    /* 中央に配置されるように調整 */
     margin-left: auto;
     margin-right: auto;
 }
@@ -718,11 +697,50 @@ ul {
 @media (min-width: 900px) {
     .main-layout {
         flex-direction: row;
-        justify-content: center; /* コンテンツを中央へ */
+        justify-content: center;
     }
     .main-content {
-        /* 幅を70%から100%に変更して、右側の余白を埋める */
         width: 100%; 
     }
-    /* サイドバーがない場合は、.sidebar の設定は無視されます */
+}
+
+.alert-box {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 15px;
+}
+
+.alert-box div {
+    background: #f4f4f4;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.alert-box div img {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.alert-box div p {
+    margin-top: 13px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .alert-box div p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .alert-box div p {
+        font-size: 0.9rem;
+    }
 }

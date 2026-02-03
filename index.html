@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -37,7 +36,7 @@
                 <ul>
                     <li><a href="#">企業情報・沿革</a></li>
                     <li><a href="#timetable">時刻表・運賃</a></li>
-                    <li><a href="#vehicles">車両紹介 <span class="badge-new">New!</span></a></li>
+                    <li><a href="#vehicles">車両紹介</a></li>
                     <li><a href="#">沿線観光ガイド</a></li>
                     <li><a href="#">お得なきっぷ</a></li>
                     <li><a href="#">お楽しみ・壁紙</a></li>
@@ -46,16 +45,6 @@
             </div>
         </nav>
     </header>
-
-    <div class="alert-bar">
-        <div class="container alert-content">
-            <div class="alert-label">運行情報</div>
-            <div class="alert-text">
-                <span class="time" id="js-current-time">現在</span>
-                <span class="status">平常通り運転しております。</span>
-            </div>
-        </div>
-    </div>
     
     <div class="news-ticker">
         <div class="container ticker-wrap">
@@ -77,7 +66,7 @@
             <img src="https://via.placeholder.com/1200x500/DDDDDD/003399?text=New+Express+Train" alt="新型特急車両">
             <div class="slide-caption">
                 <h2>快適な移動空間をあなたに。</h2>
-                <p>特急山形・秋田用HK-2000系 リニューアルデビュー</p>
+                <p>特急山形・秋田用</p>
             </div>
         </div>
         <div class="slide-item">
@@ -97,6 +86,25 @@
 
     <div class="container main-layout">
         <main class="main-content">
+
+    <section class="section">
+            <h2 class="section-title">運行情報</h2>
+            <div class="alert-box">
+                <div>
+                    <p>普通列車</p>
+                    <img src="./icon/ico_side_normal.svg" alt="">
+                </div>
+                <div>
+                    <p>特急</p>
+                    <img src="./icon/ico_side_normal.svg" alt="">
+                </div>
+                <div>
+                    <p>バス</p>
+                    <img src="./icon/ico_side_normal.svg" alt="">
+                </div>
+            </div>
+    </section>
+
             
             <section class="section news-section">
                 <h2 class="section-title">新着情報</h2>
@@ -104,7 +112,7 @@
                     <dl>
                         <dt>2026/01/30</dt>
                         <dd>
-                            車両紹介ページにHK-3000系のスペックを追加しました。
+                            車両紹介ページにHK2000系のスペックを追加しました。
                         </dd>
                     </dl>
                     <dl>
@@ -118,10 +126,6 @@
                     <dl>
                         <dt>2025/12/20</dt>
                         <dd>年末年始の特別ダイヤ（雪ダイヤ）による運行について。</dd>
-                    </dl>
-                    <dl>
-                        <dt>2025/10/01</dt>
-                        <dd>祝！ 羽前急行月山線 開業！！</dd>
                     </dl>
                 </div>
             </section>
@@ -201,12 +205,11 @@
                 </article>
 
                 <article class="vehicle-card">
-                    <div class="vehicle-img">
-                        <img src="https://via.placeholder.com/600x400/111111/FFFFFF?text=Type+HK-2000" alt="HK-2000系 特急月山">
-                        <div class="vehicle-name">HK-2000系</div>
+                    <div class="vehicle-img2">
+                        <div class="vehicle-name">UZ-2000系</div>
                     </div>
                     <div class="vehicle-info">
-                        <h3>HK-2000系（特急形直流電車 / 特急山形・秋田）</h3>
+                        <h3>UZ-2000系（特急形直流電車 / 特急月山・臨時列車等）</h3>
                         <p class="vehicle-desc">
                             開業当初から活躍する、月山線のフラッグシップ車両です。
                             豪雪地帯を最高速度160km/hで駆け抜けるため、強力なモーターと特殊な耐雪ブレーキを装備しています。
@@ -240,5 +243,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/bd992de36f.js" crossorigin="anonymous"></script>
 </body>
 </html>
