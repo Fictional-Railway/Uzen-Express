@@ -101,7 +101,7 @@ ul {
 }
 
 .btn-inquiry {
-    display: none; /* Mobile hidden */
+    display: none; 
     background: var(--primary-color);
     color: var(--white);
     padding: 8px 20px;
@@ -116,7 +116,6 @@ ul {
     }
 }
 
-/* Global Nav */
 .global-nav {
     background-color: var(--primary-color);
     width: 100%;
@@ -315,7 +314,6 @@ ul {
     color: #666;
 }
 
-/* News List */
 .news-list dl {
     display: flex;
     flex-wrap: wrap;
@@ -356,7 +354,6 @@ ul {
     border-radius: 2px;
 }
 
-/* Table */
 .table-scroll {
     overflow-x: auto;
     margin-bottom: 15px;
@@ -391,7 +388,6 @@ ul {
     padding-left: 0;
 }
 
-/* Vehicle Cards */
 .vehicle-card {
     display: flex;
     flex-direction: column;
@@ -584,7 +580,6 @@ ul {
     margin-bottom: 30px;
 }
 
-/* スマホ対応：高さを少し縮める */
 @media (max-width: 768px) {
     .hero-slider-container {
         height: 250px;
@@ -745,39 +740,34 @@ ul {
     }
 }
 
-/* =========================================
-   Monster Timetable Styles (Updated)
-   ========================================= */
 
 .table-scroll-wrapper {
     overflow-x: auto;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     background: #fff;
-    /* スクロールバーを見やすく */
+
     scrollbar-width: auto;
     scrollbar-color: var(--primary-color) #f0f0f0;
-    box-shadow: inset -5px 0 5px rgba(0,0,0,0.05); /* 右側に影をつけてスクロール示唆 */
+    box-shadow: inset -5px 0 5px rgba(0,0,0,0.05); 
 }
 
-/* 巨大テーブルの設定 */
 .monster-table {
-    width: max-content; /* 中身に合わせて幅を自動拡張 */
-    border-collapse: separate; /* Sticky Header/Col に必須 */
+    width: max-content; 
+    border-collapse: separate; 
     border-spacing: 0;
 }
 
 .monster-table th, 
 .monster-table td {
-    padding: 6px 8px; /* 少し詰める */
+    padding: 6px 8px; 
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     text-align: center;
     font-size: 0.8rem;
-    min-width: 50px; /* セルの最小幅 */
+    min-width: 50px; 
 }
 
-/* ヘッダーデザイン */
 .monster-table thead th {
     position: sticky;
     top: 0;
@@ -788,49 +778,42 @@ ul {
     vertical-align: middle;
 }
 
-/* 羽前エリアのヘッダー色 */
 .uzen-area {
     background-color: var(--primary-color);
 }
 
-/* 国鉄エリアのヘッダー色（国鉄グリーン） */
 .jr-area {
     background-color: #2e8b57;
     border-left: 1px solid rgba(255,255,255,0.3);
 }
 
-/* エリア境界線 */
 .border-right {
     border-right: 3px solid #666 !important;
 }
 
-/* ▼ Sticky Column（左端固定）の設定 ▼ */
 .sticky-col {
     position: sticky;
     left: 0;
-    z-index: 200 !important; /* ヘッダーよりさらに上 */
+    z-index: 200 !important; 
     background-color: #fff;
     border-right: 2px solid #333 !important;
     width: 120px;
     min-width: 120px;
 }
 
-/* 左上角のヘッダー固定 */
 .monster-table thead th.sticky-col {
-    background-color: #333; /* ここだけ黒っぽく */
-    z-index: 300 !important; /* 最前面 */
+    background-color: #333; 
+    z-index: 300 !important; 
 }
 
-/* 特急行の強調 */
 .type-ltd td {
     background-color: #fff5f5;
 }
 .type-ltd .sticky-col {
-    background-color: #ffe0e0; /* 固定列も色付け */
+    background-color: #ffe0e0; 
     color: var(--accent-color);
 }
 
-/* 国鉄直通行の強調 */
 .type-local-through td {
     background-color: #f0fff4;
 }
@@ -839,7 +822,6 @@ ul {
     color: #006400;
 }
 
-/* 運行なし区間（グレーアウト） */
 .no-service {
     background-color: #eee;
     background-image: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 50%, #ddd 50%, #ddd 75%, transparent 75%, transparent);

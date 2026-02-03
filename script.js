@@ -1,3 +1,5 @@
+// JSに関しては知識がないのでAIを使用しています。
+
 document.addEventListener('DOMContentLoaded', function() {
     
     /* =========================================
