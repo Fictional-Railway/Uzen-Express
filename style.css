@@ -297,6 +297,8 @@ ul {
     padding: 20px;
     border-radius: 4px;
     border: 1px solid var(--border-color);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .section-title {
@@ -984,6 +986,8 @@ ul {
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .section-title2 {
