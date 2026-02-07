@@ -43,6 +43,7 @@ ul {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 15px;
+    margin-top: 0;
 }
 
 
@@ -850,4 +851,147 @@ ul {
     color: var(--white);
     border-color: var(--primary-color);
     transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.notice-yokonarabi {
+    display: flex;
+    justify-content: center;
+    gap: 40px;   
+}
+
+.notice-title {
+    font-size: 1rem;
+}
+
+.bottom-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-color);
+    margin-top: 5px;
+}
+
+
+/* ニュースエリア全体 */
+#news-area {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.news-flex-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.news-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* ヘッダーデザイン */
+.news-header {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    border-left: 6px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* リストデザイン */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.news-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.95rem;
+}
+
+.news-list li .date {
+    color: #888;
+    font-family: 'Arial', sans-serif;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.news-list li a {
+    color: #007bff;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.news-list li a:hover {
+    text-decoration: underline;
+}
+
+/* ボタンデザイン */
+.btn-center {
+    text-align: center;
+}
+
+.btn-more {
+    display: inline-block;
+    padding: 10px 60px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-more:hover {
+    background-color: #0048ad;
+}
+
+/* スマホ対応：縦に並べる */
+@media (max-width: 768px) {
+    .news-flex-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.oshirase {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.oshirase p {
+    margin: 0;
+    font-size: 1rem;
+    color: #850404;
+}
+
+.unkojoho {
+    background-color: #ddf2ff;
+    border: 1px solid #bdcfff;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    border-left: 6px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 10px;
 }
