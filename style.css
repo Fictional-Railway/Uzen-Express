@@ -926,7 +926,7 @@ ul {
 }
 
 .news-list li a {
-    color: #007bff;
+    color: var(--text-color);
     text-decoration: none;
     line-height: 1.4;
 }
