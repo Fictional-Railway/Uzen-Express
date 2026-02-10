@@ -1000,3 +1000,18 @@ ul {
     padding-bottom: 10px;
     text-align: left;
 }
+
+.odekake-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.odekake-img {
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    
+}
