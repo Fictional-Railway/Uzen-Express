@@ -123,22 +123,9 @@ ul {
     display: none; 
 }
 
-@media (min-width: 768px) {
-    .global-nav {
-        display: block !important;
-    }
-}
-
 .global-nav ul {
     display: flex;
     flex-direction: column;
-}
-
-@media (min-width: 768px) {
-    .global-nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
 }
 
 .global-nav a {
@@ -187,12 +174,6 @@ ul {
     border: none;
     cursor: pointer;
     z-index: 100;
-}
-
-@media (min-width: 768px) {
-    .mobile-menu-btn {
-        display: none;
-    }
 }
 
 .mobile-menu-btn span {
