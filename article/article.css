@@ -1,0 +1,32 @@
+body {
+    margin: 10px ;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.img-text {
+    font-size: 0.5rem;
+    color: #666;
+    padding: 0;
+}
+
+.uzen {
+    padding-bottom: 100px;
+}
+
+.copy {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

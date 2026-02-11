@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 :root {
     --primary-color: #004098; 
     --accent-color: #e60012;  
@@ -873,8 +875,6 @@ ul {
     margin-top: 5px;
 }
 
-
-/* ニュースエリア全体 */
 #news-area {
     padding: 40px 20px;
     background-color: #fff;
@@ -892,7 +892,6 @@ ul {
     min-width: 300px;
 }
 
-/* ヘッダーデザイン */
 .news-header {
     font-size: 1.4rem;
     color: var(--primary-color);
@@ -903,7 +902,6 @@ ul {
     padding-bottom: 10px;
 }
 
-/* リストデザイン */
 .news-list {
     list-style: none;
     padding: 0;
@@ -935,7 +933,6 @@ ul {
     text-decoration: underline;
 }
 
-/* ボタンデザイン */
 .btn-center {
     text-align: center;
 }
@@ -955,7 +952,6 @@ ul {
     background-color: #0048ad;
 }
 
-/* スマホ対応：縦に並べる */
 @media (max-width: 768px) {
     .news-flex-container {
         flex-direction: column;
@@ -1009,9 +1005,8 @@ ul {
 }
 
 .odekake-img {
-    background: #f3f3f3;
-    padding: 10px;
+    border: 1px solid var(--border-color);
+    padding: 15px;
     border-radius: 5px;
     width: 400px;
-    
 }
