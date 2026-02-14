@@ -14,6 +14,10 @@ body {
     line-height: 1.6;
 }
 
+span {
+    color: #003366;
+}
+
 /* ヘッダー周り - 参考画像のバナー風デザイン */
 .site-header {
     background: linear-gradient(to bottom, #7f8c8d, #bdc3c7);
