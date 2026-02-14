@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>羽前急行電鉄 まとめサイト</title>
+    <link rel="stylesheet" href="uzstyle.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-area">
+                <img class="logo-img" src="../image/羽前急行ロゴ.png" alt="">
+                <p>架空鉄道羽前急行電鉄 まとめサイト</p>
+            </div>
+        </div>
+
+        <div class="header-bar"></div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="./uzindex.html">▶ TOPページ</a></li>
+                    <li><a href="./concept.html">▶ 基本設定</a></li>
+                    <li><a href="./route.html">▶ 路線・運行</a></li>
+                    <li><a href="./stations.html" class="active">▶ 駅一覧</a></li>
+                    <li><a href="./vehicles.html">▶ 車両図鑑</a></li>
+                    <li><a href="./sign.html">▶ サインシステム</a></li>
+                    <li><a href="./bus.html">▶ 羽急バス</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <section id="route" class="content-section">
+                <h2>駅一覧</h2>
+                <div class="section-divider"></div>
+                <p>ここでは、月山線の駅一覧について取り上げます。<br>
+                    駅の位置関係や駅の特徴についても触れています。
+                </p>
+
+                <h3>駅名と他路線</h3>
+                <table class="station-table">
+                    <tbody>
+                        <tr>
+                            <th>駅名</th>
+                            <th>退避設備</th>
+                            <th class="tb-futsu">普通</th>
+                            <th class="tb-kaisoku">快速</th>
+                            <th class="tb-shinya">深夜快速</th>
+                            <th class="tb-green">急行</th>
+                            <th class="tb-yama-aki">特急</th>
+                            <th class="tb-gassan">特急月山</th>
+                        </tr>
+                        <tr>
+                            <td>山形</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                        </tr>
+                        <tr>
+                            <td>馬見ヶ崎</td>
+                            <td></td>
+                            <td>○</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>羽前中山</td>
+                            <td></td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>寒河江</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                        </tr>
+                        <tr>
+                            <td>八鍬</td>
+                            <td></td>
+                            <td>○</td>
+                            <td></td>
+                            <td><td>
+                                <td></td>
+                        </tr>
+                        <tr>
+                            <td>西川</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                        </tr>
+                        <tr>
+                            <td>水沢温泉館</td>
+                            <td></td>
+                            <td>○</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>月山沢</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>志津信号場</td>
+                            <td>○</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>あさひ月山湖</td>
+                            <td></td>
+                            <td>○</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>下名川</td>
+                            <td></td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>上山添</td>
+                            <td></td>
+                            <td>○</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>鶴岡</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                        </tr>
+                        <tr>
+                            <td>三川</td>
+                            <td></td>
+                            <td>○</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>広栄町</td>
+                            <td></td>
+                            <td>○</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>酒田</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                            <td>○</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+                <h2>運行形態</h2>
+                <div class="section-divider"></div>
+
+                <h3>運行種別について</h3>
+
+                
+                <div class="map-container" id="mapPopupTrigger">
+                    <img src="./uzimage/Uzen-Express_Railway_Routemap_20260214183302.png" alt="路線図">
+                    <p class="map-caption">種別ありの路線図です。<br>クリックでポップアップ拡大表示されます。</p>
+                </div>
+
+                <p><span>■普通</span><br>
+                    全ての駅に停車します。<br>
+                    山形～酒田間は約1時間30分、山形～鶴岡間は約1時間10分、鶴岡～酒田間は約20分です。<br>
+                    1時間に1本程度の運行で、日中は2時間に1本程度になります。<br>
+                    山形～仙台間、山形～秋田間の直通列車の設定もあります。<br>
+                </p>
+                <p><span>■快速</span><br>
+                    急行GREEN EXPRESSの補完的な種別です。<br>
+                    山形～酒田間は約1時間、山形～鶴岡間は約45分、鶴岡～酒田間は約15分です。<br>
+                    1時間に2本程度の運行で、日中は1時間に1本程度になります。<br>
+                </p>
+                <p><span>■急行GREEN EXPRESS</span><br>
+                    羽前急行の看板列車で、乗車券のみで乗車できる最速列車です。
+                    山形～酒田間は約45分、山形～鶴岡間は約30分、鶴岡～酒田間は約10分です。<br>
+                    1時間に1本程度の運行で、日中も同程度の運行になります。<br>
+                </p>
+                <p><span>■特急「やまがた」「あきた」</span><br>
+                    山形～秋田間の直通特急で、特急料金が必要な月山線内の最速列車です。<br>
+                    主要駅にしか止まらず、山形～仙台間は約30分、山形～秋田間は約1時間30分です。<br>
+                    1時間に1本程度の運行で、日中も同程度の運行になります。<br>
+                </p>
+                <p><span>■特急「月山」</span><br>
+                    山形～酒田間の特急で、特急料金が必要です。<br>
+                    特急やまがた/あきたの停車駅から寒河江を減らし、月山沢に停車するパターンで運行されています。山形～酒田間は約25分です。<br>
+                    1時間に1本程度の運行で、日中も同程度の運行になります。<br>
+                </p>
+                <p><span>■深夜快速</span><br>
+                    山形～酒田間の深夜帯に運行される快速列車で、特急料金が必要です。<br>
+                    専用の「UZ-1000形2500番台」車両はフルフラット座席で快適な移動を提供しています。<br>
+                    行先ごとに1日1往復の運行で、東北から関東・信越まで幅広い行先があります。<br>
+
+                </p>
+
+                <br>
+
+                <h3>路線の特徴</h3>
+                <p>
+                    月山線は全線が単線で、途中駅ではすれ違いのための待ち合わせが行われます。また、月山沢～あさひ月山湖間は駅間が非常に長い(約14km)ため、途中に志津信号場を設けてすれ違いをしています。<br>
+                </p>
+
+                
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="../index.html">⇨ 公式風ホームページに戻る</a>
+        </div>
+        <div class="disclaimer">
+            <p>⚠ 羽前急行および羽前急行バス等関連グループは架空の創造物であり、実際には存在しません。文中には、実在の団体・企業名がありますが、それらと一切関係はございません。</p>
+        </div>
+        <p class="copyright">Copyright &copy; Uzen Express All Rights Reserved.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script src="uzscript.js"></script>
+</body>
+</html>
