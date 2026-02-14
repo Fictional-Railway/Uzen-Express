@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>羽前急行電鉄 まとめサイト</title>
     <link rel="stylesheet" href="uzstyle.css">
 </head>
