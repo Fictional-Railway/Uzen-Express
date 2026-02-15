@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* 基本リセット */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,7 @@
 
 body {
     font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
-    background-color: #f0f0f0; /* 背景グレー */
+    background-color: #f0f0f0; 
     color: #333;
     line-height: 1.6;
 }
@@ -18,10 +17,10 @@ span {
     color: #003366;
 }
 
-/* ヘッダー周り - 参考画像のバナー風デザイン */
+
 .site-header {
     background: linear-gradient(to bottom, #7f8c8d, #bdc3c7);
-    border-bottom: 5px solid #d35400; /* オレンジのライン */
+    border-bottom: 5px solid #d35400;
     padding: 10px 0;
     position: relative;
     overflow: hidden;
@@ -38,7 +37,7 @@ span {
 .logo-area h1 {
     font-family: Impact, sans-serif;
     font-size: 3rem;
-    color: #003366; /* 濃い青 */
+    color: #003366; 
     text-shadow: 2px 2px 0px #fff;
     font-style: italic;
     letter-spacing: 1px;
@@ -61,7 +60,6 @@ span {
     border-radius: 5px;
 }
 
-/* レイアウト */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -71,7 +69,6 @@ span {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* 左サイドバー */
 .sidebar {
     width: 240px;
     background: linear-gradient(to right, #e0e0e0, #f5f5f5);
@@ -95,7 +92,6 @@ span {
     color: #333;
     font-weight: bold;
     font-size: 0.9rem;
-    /* ボタン風のグラデーション（参考画像風） */
     background: linear-gradient(to bottom, #dcdcdc 0%, #a9a9a9 100%);
     border-top: 1px solid #eee;
     border-bottom: 1px solid #666;
@@ -108,14 +104,12 @@ span {
     border-left-color: #d35400;
 }
 
-/* アクティブなメニュー（現在地） */
 .nav-list li a.active {
-    background: #2c3e50; /* 濃紺 */
+    background: #2c3e50; 
     color: #fff;
     border-left-color: #d35400;
 }
 
-/* メインコンテンツ */
 .main-content {
     flex-grow: 1;
     padding: 30px;
@@ -147,7 +141,6 @@ p {
     font-size: 0.95rem;
 }
 
-/* 画像ボックス */
 .image-box, .map-container {
     margin: 20px 0;
     border: 1px solid #ddd;
@@ -169,13 +162,12 @@ p {
 }
 
 .map-container {
-    cursor: pointer; /* クリックできることを示す */
+    cursor: pointer;
 }
 .map-container:hover img {
     opacity: 0.8;
 }
 
-/* スペックリスト */
 .spec-list dt {
     font-weight: bold;
     color: #003366;
@@ -186,7 +178,6 @@ p {
     margin-bottom: 10px;
 }
 
-/* フッター */
 .site-footer {
     max-width: 1000px;
     margin: 0 auto;
@@ -220,7 +211,6 @@ p {
     color: #999;
 }
 
-/* モーダル（拡大表示用） */
 .modal {
     display: none; 
     position: fixed; 
