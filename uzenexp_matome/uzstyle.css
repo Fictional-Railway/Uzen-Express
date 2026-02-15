@@ -268,7 +268,7 @@ p {
 .station-table th, .station-table td {
     border: 1px solid #ccc;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 .station-table th {
