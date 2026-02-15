@@ -26,7 +26,7 @@
                 <ul class="nav-list">
                     <li><a href="./uzindex.html" class="active">▶ TOPページ</a></li>
                     <li><a href="./concept.html">▶ 基本設定</a></li>
-                    <li><a href="./route.html">▶ 路線図・運行</a></li>
+                    <li><a href="./route.html">▶ 路線・運行</a></li>
                     <li><a href="./stations.html">▶ 駅一覧</a></li>
                     <li><a href="./vehicles.html">▶ 車両図鑑</a></li>
                     <li><a href="./sign.html">▶ サインシステム</a></li>
