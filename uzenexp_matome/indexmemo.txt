@@ -30,7 +30,7 @@
                     <li><a href="./stations.html">▶ 駅一覧</a></li>
                     <li><a href="./vehicles.html">▶ 車両図鑑</a></li>
                     <li><a href="./sign.html">▶ サインシステム</a></li>
-                    <li><a href="./bus.html">▶ 羽急バス</a></li>
+                    <li><a href="./bus.html">▶ 羽前急行バス</a></li>
                 </ul>
             </nav>
         </aside>
@@ -39,7 +39,7 @@
             
             <section id="top" class="content-section">
                 <h2>はじめに</h2>
-                <p>ここは、架空鉄道「羽前急行電鉄（羽急）」の設定・ルート・車両について取り上げます。<br>
+                <p>ここは、架空鉄道「羽前急行電鉄」の設定・ルート・車両について取り上げます。<br>
                 このサイトは架空の創作物に関するまとめページであり、実在の企業・団体とは一切関係ありません。</p>
                 
                 <div class="image-box">
@@ -51,7 +51,7 @@
             <section id="route" class="content-section">
                 <h2>路線</h2>
                 <div class="section-divider"></div>
-                <p>ここでは、羽急線のルート・設定について取り上げます。<br>
+                <p>ここでは、月山線のルート・設定について取り上げます。<br>
                 下記のマップでは直通運転を行っている他社線のルートにも触れています。</p>
 
                 <div class="map-container" id="mapPopupTrigger">
