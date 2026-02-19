@@ -2,25 +2,24 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    /* =========================================
-       文字サイズ変更機能
-       ========================================= */
-    const btnNormal = document.getElementById('btn-text-normal');
-    const btnLarge = document.getElementById('btn-text-large');
+/* script.js の「文字サイズ変更機能」の部分を以下に差し替え */
+const html = document.documentElement; // bodyではなくhtmlを選択
+const btnNormal = document.getElementById('btn-text-normal');
+const btnLarge = document.getElementById('btn-text-large');
+
+if (btnNormal && btnLarge) {
+    btnNormal.addEventListener('click', () => {
+        html.classList.remove('text-large'); // htmlタグからクラスを消す
+        btnNormal.classList.add('active');
+        btnLarge.classList.remove('active');
+    });
     
-    if (btnNormal && btnLarge) {
-        btnNormal.addEventListener('click', () => {
-            document.body.classList.remove('text-large');
-            btnNormal.classList.add('active');
-            btnLarge.classList.remove('active');
-        });
-        
-        btnLarge.addEventListener('click', () => {
-            document.body.classList.add('text-large');
-            btnLarge.classList.add('active');
-            btnNormal.classList.remove('active');
-        });
-    }
+    btnLarge.addEventListener('click', () => {
+        html.classList.add('text-large'); // htmlタグにクラスをつける
+        btnLarge.classList.add('active');
+        btnNormal.classList.remove('active');
+    });
+}
 
     /* =========================================
        ハンバーガーメニュー（スマホ用）

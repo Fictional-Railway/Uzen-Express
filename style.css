@@ -173,3 +173,8 @@ ul { list-style: none; }
 .footer-links a { color: #fff; font-size: 0.85rem; }
 .footer-links a:hover { color: var(--primary-color); }
 .copyright { font-size: 0.8rem; }
+
+/* style.css の「文字サイズ大のクラス」の部分を修正 */
+html.text-large { 
+    font-size: 125%; /* 標準の1.25倍（約20pxベース）になります */
+}
