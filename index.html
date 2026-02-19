@@ -1,5 +1,3 @@
-<!-- 最終更新 2026年2月11日 -->
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,203 +12,167 @@
 </head>
 <body>
 
+    <div class="header-top">
+        <div class="container lang-nav">
+            <span class="text-size-tool">
+                文字サイズ：
+                <button id="btn-text-normal" class="active">標準</button>
+                <button id="btn-text-large">大</button>
+            </span>
+            <a href="#">Language</a>
+        </div>
+    </div>
+
     <header class="site-header">
         <div class="header-main container">
             <div class="logo">
                 <h1>
-                    <img src="./image/羽前急行ロゴ.png" width="250px" style="margin: 0;" alt="UZEN EXPRESS RAILWAY">
-                    <span class="logo-sub">羽前急行</span>
+                    <img src="./image/羽前急行ロゴ.png" width="250px" style="margin: 0;" alt="羽前急行ロゴ">
+                    <span class="logo-sub">羽前急行電鉄株式会社</span>
                 </h1>
                 <p class="tagline">Since 1996.1.31 - 山形と酒田を110分で結ぶ、夢の超特急。</p>
             </div>
         </div>
         
-        <button class="mobile-menu-btn" id="js-menu-btn">
+        <button class="mobile-menu-btn" id="js-menu-btn" aria-label="メニューを開く">
             <span></span><span></span><span></span>
         </button>
 
         <nav class="global-nav" id="js-nav">
             <div class="container">
                 <ul>
-                    <li><a href="#">企業情報・沿革</a></li>
+                    <li><a href="#">運行情報</a></li>
                     <li><a href="#timetable">時刻表・運賃</a></li>
-                    <li><a href="#">特急列車のご案内</a></li>
-                    <li><a href="#vehicles">車両紹介</a></li>
-                    <li><a href="#">お出かけ情報</a></li>
-                    <li><a href="#">お得なきっぷ</a></li>
-                    <li><a href="#">IR情報</a></li>
-                    <li><a href="#">よくあるご質問</a></li>
+                    <li><a href="#">駅・路線図</a></li>
+                    <li><a href="#vehicles">車両案内・特急</a></li>
+                    <li><a href="#">お得なきっぷ・観光</a></li>
+                    <li><a href="#">企業・IR情報</a></li>
+                    <li><a href="#">安全への取り組み</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <div class="news-ticker">
         <div class="container ticker-wrap">
-            <span class="ticker-label">NEWS</span>
-            <div class="ticker-item">羽前急行電鉄は架空の創作物であり、実際には存在しません。<a href="./uzenexp_matome/uzindex.html">設定まとめサイトはここから</a></div>
-        </div>
-    </div>
-    <br>
-    <div class="hero-slider-container">
-    <div class="slider-wrapper" id="js-slider-wrapper">
-        <div class="slide-item">
-            <img src="./image/33899383_s.jpg" alt="雪景色を行く">
-            <div class="slide-caption">
-                <h2>この冬、月山に行こう。</h2>
-                <p>羽前急行主催 月山登山ツアー開催中！</p>
-            </div>
-        </div>
-        <div class="slide-item">
-            <img src="./image/27247162_s.jpg" alt="いなほ485系">
-            <div class="slide-caption">
-                <h2>特急いなほへの乗り継ぎ強化！</h2>
-                <p>ダイヤ改正により接続が改善されます。</p>
-            </div>
-        </div>
-        <div class="slide-item">
-            <img src="./image/無題569_20260209220258.png" alt="UZ-1000形100番台写真">
-            <div class="slide-caption">
-                <h2>急行GREEN EXPRESSで快適な旅を！</h2>
-                <p>乗車券のみで酒田-仙台を最速で結びます。</p>
-            </div>
+            <span class="ticker-label">重要なお知らせ</span>
+            <div class="ticker-item">羽前急行電鉄は架空の創作物であり、実際には存在しません。<a href="./uzenexp_matome/uzindex.html">設定まとめサイトはこちら</a></div>
         </div>
     </div>
 
-    <button class="slider-btn prev" id="js-slider-prev">←</button>
-    <button class="slider-btn next" id="js-slider-next">→</button>
-    
-    <div class="slider-dots" id="js-slider-dots"></div>
-</div>
-
-<div class="unkojoho">
-<h2 class="section-title2">現在の運行情報</h2>
+    <div class="container unkojoho-container">
+        <div class="unkojoho">
+            <div class="unkojoho-header">
+                <h2 class="section-title2"><i class="fas fa-train"></i> 現在の運行情報</h2>
+                <span id="js-current-time" class="unkojoho-time"></span>
+            </div>
             <div class="alert-box">
-                <div>
-                    <p>普通列車</p>
-                    <img src="./icon/ico_side_normal.svg" alt="">
+                <div class="status-normal">
+                    <p>羽前急行線</p>
+                    <span class="status-text">平常運転</span>
                 </div>
-                <div>
-                    <p>特急</p>
-                    <img src="./icon/ico_side_normal.svg" alt="">
+                <div class="status-normal">
+                    <p>特急列車</p>
+                    <span class="status-text">平常運転</span>
                 </div>
-                <div>
-                    <p>バス</p>
-                    <img src="./icon/ico_side_normal.svg" alt="">
+                <div class="status-normal">
+                    <p>連絡バス</p>
+                    <span class="status-text">平常運転</span>
                 </div>
             </div>
-            <p><a href="#">遅延証明書 ＞</a></p>
-            <p id="last-update">最終更新: 更新が正常に行われませんでした。</p>
-            <p class="copyright">※このページは自動的に更新されません。</p>
+            <div class="unkojoho-footer">
+                <p><a href="#">遅延証明書の発行はこちら ＞</a></p>
+                <p id="last-update" class="copyright">最終更新: 取得中...</p>
+            </div>
         </div>
+    </div>
+
+    <div class="hero-slider-container">
+        <div class="slider-wrapper" id="js-slider-wrapper">
+            <div class="slide-item">
+                <img src="./image/33899383_s.jpg" alt="雪景色を行く">
+                <div class="slide-caption">
+                    <h2>この冬、月山に行こう。</h2>
+                    <p>羽前急行主催 月山登山ツアー開催中！</p>
+                </div>
+            </div>
+            <div class="slide-item">
+                <img src="./image/27247162_s.jpg" alt="いなほ485系">
+                <div class="slide-caption">
+                    <h2>特急いなほへの乗り継ぎ強化！</h2>
+                    <p>ダイヤ改正により接続が改善されます。</p>
+                </div>
+            </div>
+            <div class="slide-item">
+                <img src="./image/無題569_20260209220258.png" alt="UZ-1000形100番台写真">
+                <div class="slide-caption">
+                    <h2>急行GREEN EXPRESSで快適な旅を！</h2>
+                    <p>乗車券のみで酒田-仙台を最速で結びます。</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" id="js-slider-prev">←</button>
+        <button class="slider-btn next" id="js-slider-next">→</button>
+        <div class="slider-dots" id="js-slider-dots"></div>
+    </div>
+
     <div class="container main-layout">
         <main class="main-content">
-            </div>
 
-    <section class="section odekake-section">
-        <h2 class="section-title">おでかけ情報</h2> 
-        <div class="odekake-grid">
-            <div class="odekake-img">
-                <div class="odekake-caption">
-                    <img src="./image/月山16-9_20260210.png" width="50%" style="border-radius: 5px;" alt="月山"></div>
-                <div class="odekake-caption">
-                    <h3>冬の月山登山ツアー開催中！</h3>
-                    <p>初心者から上級者まで楽しめる多彩なコースをご用意。</p>
-                    <a href="#" class="btn-odekake">詳しく見る</a>
+            <section class="section odekake-section">
+                <h2 class="section-title">おすすめ・おでかけ情報</h2> 
+                <div class="odekake-grid">
+                    <div class="odekake-card">
+                        <img src="./image/月山16-9_20260210.png" alt="月山">
+                        <div class="odekake-caption">
+                            <h3>冬の月山登山ツアー開催中！</h3>
+                            <p>初心者から上級者まで楽しめる多彩なコースをご用意。</p>
+                        </div>
+                    </div>
+                    <div class="odekake-card">
+                        <img src="./image/27247162_s.jpg" alt="臨時特急">
+                        <div class="odekake-caption">
+                            <h3>臨時特急「スーパーやまがた」運行中！</h3>
+                            <p>酒田、鶴岡、仙台の各都市から山形へ最速で結びます。</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="odekake-img">
-                <img src="./image/27247162_s.jpg" width="50%" style="border-radius: 5px;" alt="酒田祭り">
-                <div class="odekake-caption">
-                    <h3>臨時特急「スーパーやまがた」運行中！</h3>
-                    <p>酒田、鶴岡、仙台の各都市から山形へ最速で結ぶ観光客向け臨時特急を運行中です。</p>
-                    <a href="#" class="btn-odekake">詳しく見る</a>
+            </section>
+            
+            <section id="news-area" class="section">
+                <h2 class="section-title">ニュースリリース・お知らせ</h2>
+                <ul class="news-list">
+                    <li>
+                        <span class="date">2026.02.07</span>
+                        <span class="badge-update">リリース</span>
+                        <a href="#">2026年3月14日 ダイヤ改正を実施します（秋田直通便の増発）</a>
+                    </li>
+                    <li>
+                        <span class="date">2026.02.01</span>
+                        <span class="badge-update" style="background:#2e8b57;">お知らせ</span>
+                        <a href="#">UZ-1000形車内にて「月山天然水」の限定販売を開始します</a>
+                    </li>
+                    <li>
+                        <span class="date">2026.01.30</span>
+                        <span class="badge-update">リリース</span>
+                        <a href="#">UZ-1000形への「熱線吸収ブロンズガラス」追加換装完了のお知らせ</a>
+                    </li>
+                    <li>
+                        <span class="date">2025.12.20</span>
+                        <span class="badge-update">リリース</span>
+                        <a href="./article/20251220.html">高速走行試験車「キヤUZ-850形」の走行試験で最高時速192kmを達成</a>
+                    </li>
+                </ul>
+                <div class="btn-center">
+                    <a href="#" class="btn-more">一覧を見る</a>
                 </div>
-            </div>
-            <div class="odekake-img">
-                <img src="./image/UZ1000-2500_車内.png" width="50%" style="border-radius: 5px;" alt="酒田祭り">
-                <div class="odekake-caption">
-                    <h3>
-                        深夜快速で深夜帯の移動がもっと便利に！
-                    </h3>
-                    <p>山形から北東北、更には関東・信越方面へも快適な移動が可能になります。</p>
-                    <a href="#" class="btn-odekake">詳しく見る</a>
-                </div>
-            </div>
-            <div class="odekake-img">
-                <img src="./image/無題569_20260209220258.png" style="width: 50%; border-radius: 5px;" alt="急行GREEN EXPRESS">
-                <div class="odekake-caption">
-                    <h3>急行GREEN EXPRESSで快適な旅を！</h3>
-                    <p>東北の各地域を結ぶ急行列車！乗車券のみでご乗車できます。
-                    </p>
-                    <a href="#" class="btn-odekake">詳しく見る</a>
-                </div>
-            </div>   
-    </section>
+            </section>
 
-    <section id="news-area" class="section">
-    <div class="news-flex-container">
-        <div class="news-column">
-            <h3 class="news-header">お知らせ</h3>
-            <ul class="news-list">
-                <li>
-                    <span class="date">2026.02.01</span>
-                    <a href="#">UZ-1000形車内にて「月山天然水」の限定販売を開始します</a>
-                </li>
-                <li>
-                    <span class="date">2026.01.20</span>
-                    <a href="#">水沢温泉館駅周辺のハイキングコース除雪状況について</a>
-                </li>
-                <li>
-                    <span class="date">2026.01.05</span>
-                    <a href="#">志津信号場付近の展望スポット案内板をリニューアルしました</a>
-                </li>
-                <li>
-                    <span class="date">2025.12.15</span>
-                    <a href="#">冬季の豪雪対策および耐寒耐雪設計車両の運用について</a>
-                </li>   
-                <li>
-                    <span class="date">2025.11.20</span>
-                    <a href="#">月山沢駅 優等種別臨時停車のお知らせ</a>
-                </li>
-            </ul>
-            <div class="btn-center">
-                <a href="#" class="btn-more">お知らせ 一覧</a>
-            </div>
-        </div>
-
-        <div class="news-column">
-            <h3 class="news-header">ニュースリリース</h3>
-            <ul class="news-list">
-                <li>
-                    <span class="date">2026.02.07</span>
-                    <a href="#">2026年3月14日 ダイヤ改正を実施します（秋田直通便の増発）</a>
-                </li>
-                <li>
-                    <span class="date">2026.01.30</span>
-                    <a href="#">UZ-1000形への「熱線吸収ブロンズガラス」追加換装完了のお知らせ</a>
-                </li>
-                <li>
-                    <span class="date">2026.01.12</span>
-                    <a href="#">下名川駅のバリアフリー化工事着手について</a>
-                </li>
-                <li>
-                    <span class="date">2025.12.20</span>
-                    <a href="./article/20251220.html">高速走行試験車「キヤUZ-850形」の走行試験で最高時速192kmを達成</a>
-                </li>
-            </ul>
-            <div class="btn-center">
-                <a href="#" class="btn-more">ニュースリリース 一覧</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+            
 
             <section id="timetable" class="section fare-section">
                 <h2 class="section-title">主要区間 運賃・料金表</h2>
                 <p class="section-lead">普通運賃および小児料金のご案内です。</p>
-                
                 <div class="table-scroll">
                     <table class="modern-table">
                         <thead>
@@ -235,18 +197,6 @@
                                 <td>山形-西川</td>
                             </tr>
                             <tr>
-                                <td>40km - 60km</td>
-                                <td>750円</td>
-                                <td>375円</td>
-                                <td>山形-山添</td>
-                            </tr>
-                            <tr>
-                                <td>60km - 80km</td>
-                                <td>1,000円</td>
-                                <td>500円</td>
-                                <td>山形-鶴岡</td>
-                            </tr>
-                            <tr>
                                 <td>80km -</td>
                                 <td>1,250円</td>
                                 <td>625円</td>
@@ -257,75 +207,61 @@
                 </div>
                 <ul class="note-list">
                     <li>※小児運賃は大人運賃の半額です。</li>
-                    <li>※上記表の小児運賃等の金額は、現行の届出運賃に基づきます。</li>
                     <li>※国鉄線内は別に初乗り運賃が適用されます。</li>
                 </ul>
             </section>
 
             <section id="vehicles" class="section vehicle-section">
-                <h2 class="section-title">車両紹介・性能について</h2>
-                
+                <h2 class="section-title">車両紹介</h2>
                 <article class="vehicle-card">
                     <div class="vehicle-img">
-                        
                         <div class="vehicle-name">UZ-1000形</div>
                     </div>
                     <div class="vehicle-info">
                         <h3>UZ-1000形（普通交直流電車）</h3>
                         <p class="vehicle-desc">
-                            月山線の主力車両です。座席定員の確保とスムーズな乗降を考慮し、セミクロスシートを採用しました。
-                            熱線吸収ブロンズガラスにより、遮光性と冷房効果を向上させています。
-                            最大の特徴は、ローカル線としては異例の最高速度120km/hでの走行性能です。
-                            日本有数の豪雪地帯に対応した耐寒耐雪設計に加え、高い加減速性能で地域の速達性を支えています。
+                            月山線の主力車両です。ローカル線としては異例の最高速度120km/hでの走行性能を持ち、日本有数の豪雪地帯に対応した耐寒耐雪設計が特徴です。
                         </p>
-                        <table class="spec-table">
-                            <tbody>
-                                <tr><th>最高運転速度</th><td>140 km/h (設計最高速度 160km/h)</td></tr>
-                                <tr><th>主電動機出力</th><td>150kW × 4 /両(M車)</td></tr>
-                                <tr><th>制御方式</th><td>VVVFインバータ制御 (小海IGBT/日立IGBT)</td></tr>
-                                <tr><th>編成定員</th><td>44名/80名 (1両編成)</td></tr>
-                            </tbody>
-                        </table>
                     </div>
                 </article>
-
                 <article class="vehicle-card">
                     <div class="vehicle-img2">
                         <div class="vehicle-name">UZ-1000形100番台</div>
                     </div>
                     <div class="vehicle-info">
-                        <h3>UZ-1000形100番台（特急形交直流電車/急行等）</h3>
+                        <h3>UZ-1000形100番台（特急形交直流電車）</h3>
                         <p class="vehicle-desc">
-                            1998年に登場した特急形車両です。UZ-1000形の基本設計を踏襲しつつ、内外装の高級感を向上させています。
-                            座席はリクライニングシートを採用し、快適な乗り心地を提供します。
-                            また、専用のラウンジスペースや大型荷物置き場を備え、長距離移動にも対応しています。
-                            最高速度160km/hの高速走行性能により、地域間の速達性を大幅に向上させました。
+                            最高速度160km/hの高速走行性能により、地域間の速達性を大幅に向上させた特急形車両です。専用ラウンジも備えています。
                         </p>
-                        <table class="spec-table">
-                            <tbody>
-                                <tr><th>最高運転速度</th><td>160 km/h (設計最高速度 160km/h)</td></tr>
-                                <tr><th>主電動機出力</th><td>185kW × 4 /両(M車)</td></tr>
-                                <tr><th>制御方式</th><td>VVVFインバータ制御 (小海GTO)</td></tr>
-                                <tr><th>編成定員</th><td>44名/80名 (1両編成)</td></tr>
-                            </tbody>
-                        </table>
                     </div>
                 </article>
             </section>
         </main>
 
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h3 class="sidebar-title">関連リンク</h3>
+                <ul class="banner-list">
+                    <li><a href="#"><div class="dummy-banner bg-safety">安全報告書 2025</div></a></li>
+                    <li><a href="#"><div class="dummy-banner bg-ic">交通系ICカードのご案内</div></a></li>
+                    <li><a href="#"><div class="dummy-banner bg-goods">羽前急行オリジナルグッズ</div></a></li>
+                    <li><a href="#"><div class="dummy-banner bg-recruit">採用情報</div></a></li>
+                </ul>
+            </div>
+        </aside>
     </div>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-links">
                 <a href="#">会社概要</a>
+                <a href="#">お問い合わせ</a>
                 <a href="#">プライバシーポリシー</a>
                 <a href="#">サイト利用規約</a>
             </div>
             <p class="copyright">Copyright &copy; 2025-2026 Uzen Express Railway All Rights Reserved.</p><br>
-            <p class="copyright">
-                羽前急行電鉄は架空の創作物であり、実際には存在しません。また、実在の地名・鉄道会社名・企業名がありますが、これらはフィクションであり、特定の実在の団体・企業等とは一切関係ありません。
+            <p class="copyright" style="font-size: 0.7rem;">
+                羽前急行電鉄は架空の創作物であり、実際には存在しません。実在の地名・鉄道会社名等が登場しますが、特定の実在の団体・企業等とは一切関係ありません。
             </p>
         </div>
     </footer>

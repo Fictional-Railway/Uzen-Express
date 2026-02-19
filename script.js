@@ -1,7 +1,27 @@
-// JSに関しては知識がないのでAIを使用しています。
+// 羽前急行 公式サイト用スクリプト
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    /* =========================================
+       文字サイズ変更機能
+       ========================================= */
+    const btnNormal = document.getElementById('btn-text-normal');
+    const btnLarge = document.getElementById('btn-text-large');
+    
+    if (btnNormal && btnLarge) {
+        btnNormal.addEventListener('click', () => {
+            document.body.classList.remove('text-large');
+            btnNormal.classList.add('active');
+            btnLarge.classList.remove('active');
+        });
+        
+        btnLarge.addEventListener('click', () => {
+            document.body.classList.add('text-large');
+            btnLarge.classList.add('active');
+            btnNormal.classList.remove('active');
+        });
+    }
+
     /* =========================================
        ハンバーガーメニュー（スマホ用）
        ========================================= */
@@ -10,10 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (menuBtn && nav) {
         menuBtn.addEventListener('click', function() {
-            // ボタンの見た目を切り替え
             this.classList.toggle('active');
-            
-            // ナビゲーションの表示・非表示を切り替え
             if (nav.style.display === 'block') {
                 nav.style.display = 'none';
             } else {
@@ -23,21 +40,108 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* =========================================
+       現在時刻と最終更新の取得・表示
+       ========================================= */
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+
+    // 現在時刻（運行情報ヘッダー用）
+    const timeElement = document.getElementById('js-current-time');
+    if (timeElement) {
+        timeElement.textContent = `${month}月${day}日 ${hours}:${formattedMinutes}現在`;
+    }
+
+    // 最終更新時刻（運行情報フッター用）
+    const updateElement = document.getElementById('last-update');
+    if (updateElement) {
+        updateElement.textContent = `最終更新: ${year}年${month}月${day}日 ${hours}:${formattedMinutes}`;
+    }
+
+    /* =========================================
+       ヒーロースライダー
+       ========================================= */
+    const sliderWrapper = document.getElementById('js-slider-wrapper');
+    const slides = document.querySelectorAll('.slide-item');
+    const prevBtn = document.getElementById('js-slider-prev');
+    const nextBtn = document.getElementById('js-slider-next');
+    const dotsContainer = document.getElementById('js-slider-dots');
+    
+    if (sliderWrapper && slides.length > 0) {
+        let currentIndex = 0;
+        const slideCount = slides.length;
+        let autoPlayInterval;
+
+        // インジケーター生成
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetAutoPlay();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            const translateX = -1 * currentIndex * 100;
+            sliderWrapper.style.transform = `translateX(${translateX}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentIndex].classList.add('active');
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= slideCount) currentIndex = 0;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            if (currentIndex < 0) currentIndex = slideCount - 1;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
+        prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        startAutoPlay();
+    }
+
+    /* =========================================
        スムーズスクロール
        ========================================= */
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
 
             const targetElement = document.querySelector(targetId);
-            
             if (targetElement) {
-                // ヘッダーの高さ分ずらす（固定ヘッダー対策風）
                 const headerOffset = 20; 
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -47,171 +151,31 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: "smooth"
                 });
 
-                // スマホメニューが開いていたら閉じる
-                if (window.innerWidth < 768 && nav.style.display === 'block') {
+                if (window.innerWidth < 768 && nav && nav.style.display === 'block') {
                     nav.style.display = 'none';
                     menuBtn.classList.remove('active');
                 }
             }
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // スライダーの要素を取得
-    const sliderWrapper = document.getElementById('js-slider-wrapper');
-    const slides = document.querySelectorAll('.slide-item');
-    const prevBtn = document.getElementById('js-slider-prev');
-    const nextBtn = document.getElementById('js-slider-next');
-    const dotsContainer = document.getElementById('js-slider-dots');
-    
-    // スライドが無ければ終了
-    if (!sliderWrapper || slides.length === 0) return;
-
-    let currentIndex = 0;
-    const slideCount = slides.length;
-    let autoPlayInterval;
-
-    // インジケーター（丸い点）を生成
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        
-        // 点をクリックしたらそのスライドへ
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-            resetAutoPlay();
-        });
-        dotsContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll('.dot');
-
-    // スライドを移動させる関数
-    function updateSlider() {
-        // 横にずらす量 (%) を計算
-        const translateX = -1 * currentIndex * 100;
-        sliderWrapper.style.transform = `translateX(${translateX}%)`;
-
-        // 点の見た目を更新
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentIndex].classList.add('active');
-    }
-
-    // 指定した番号へ移動
-    function goToSlide(index) {
-        currentIndex = index;
-        updateSlider();
-    }
-
-    // 次へ
-    function nextSlide() {
-        currentIndex++;
-        if (currentIndex >= slideCount) {
-            currentIndex = 0;
-        }
-        updateSlider();
-    }
-
-    // 前へ
-    function prevSlide() {
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = slideCount - 1;
-        }
-        updateSlider();
-    }
-
-    // ボタンのイベントリスナー
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoPlay();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoPlay();
-    });
-
-    // 自動再生（5秒ごとに次へ）
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 5000);
-    }
-
-    // 操作したらタイマーをリセット
-    function resetAutoPlay() {
-        clearInterval(autoPlayInterval);
-        startAutoPlay();
-    }
-
-    // 開始
-    startAutoPlay();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // 現在の日時を取得
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth() + 1; // 月は0から始まるので+1
-    const day = now.getDate();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
-
-    // フォーマットを作成
-    const formattedDate = `${month}月${day}日 ${hours}:${formattedMinutes}現在`;
-    // HTMLに反映
-    const timeElement = document.getElementById('js-current-time');
-
-    if (timeElement) {
-        timeElement.textContent = formattedDate;
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // 現在の日時を取得
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth() + 1; // 月は0から始まるので+1
-    const day = now.getDate();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
-    // フォーマットを作成
-    const formattedDate = `最終更新: ${year}年${month}月${day}日 ${hours}:${formattedMinutes}`;
-    // HTMLに反映
-    const updateElement = document.getElementById('last-update');
-    if (updateElement) {
-        updateElement.textContent = formattedDate;
-    }
-});
-
-
-// ▼▼▼ 以下を script.js の最後（DOMContentLoadedの中）に追加 ▼▼▼
-
-    // 時刻表タブの切り替え機能
+    /* =========================================
+       時刻表タブの切り替え機能
+       ========================================= */
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.timetable-content');
 
     if (tabBtns.length > 0) {
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // すべてのボタンからactiveを外す
                 tabBtns.forEach(b => b.classList.remove('active'));
-                // クリックされたボタンにactiveをつける
                 btn.classList.add('active');
 
-                // ターゲットとなるIDを取得
                 const targetId = btn.getAttribute('data-target');
-
-                // すべてのコンテンツを非表示にする
                 tabContents.forEach(content => {
                     content.classList.remove('active');
                 });
 
-                // ターゲットだけ表示する
                 const targetContent = document.getElementById(targetId);
                 if (targetContent) {
                     targetContent.classList.add('active');
@@ -219,3 +183,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+});
