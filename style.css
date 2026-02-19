@@ -166,6 +166,7 @@ ul { list-style: none; }
 .bg-ic { background: #16a085; }
 .bg-goods { background: #d35400; }
 .bg-recruit { background: #2980b9; }
+.bg-conductorless { background: #e6a817; }
 
 /* フッター */
 .site-footer { background-color: #1a1a1a; color: #ccc; padding: 40px 0 20px; text-align: center; margin-top: auto; border-top: 5px solid var(--primary-color); }
