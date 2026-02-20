@@ -133,11 +133,14 @@ ul { list-style: none; }
 
 .vehicle-card { display: flex; flex-direction: column; margin-bottom: 20px; border: 1px solid #eee; border-radius: 4px; overflow: hidden; }
 @media (min-width: 600px) { .vehicle-card { flex-direction: row; } }
-.vehicle-img, .vehicle-img2, .vehicle-img3 { position: relative; min-height: 180px; background-size: cover; background-position: center; width: 100%; }
+.vehicle-img, .vehicle-img2, .vehicle-img3, .vehicle-img4 { position: relative; min-height: 180px; background-size: cover; background-position: center; width: 100%; }
 @media (min-width: 600px) { .vehicle-img, .vehicle-img2 { width: 35%; flex-shrink: 0; } }
 .vehicle-img { background-image: url(./image/羽前急行月山線_UZ1000形電車-V3.png); background-color: #ccc; }
 .vehicle-img2 { background-image: url(./image/UZ1000_100_nomal.png); background-color: #ccc; }
 .vehicle-img3 { background-image: url(./image/UZ1000-2500_車内.png); background-color: #ccc; }
+.vehicle-img4 { background: url(./image/27247162_s.jpg); background-color: #ccc; 
+    background-size: cover; background-position: center;
+}
 .vehicle-name { position: absolute; bottom: 0; left: 0; background: rgba(0, 64, 152, 0.9); color: #fff; padding: 4px 12px; font-size: 0.85rem; font-weight: bold; }
 .vehicle-info { padding: 20px; }
 .vehicle-info h3 { font-size: 1.1rem; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px; }
