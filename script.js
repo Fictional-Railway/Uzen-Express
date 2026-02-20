@@ -1,4 +1,5 @@
 // 羽前急行 公式サイト用スクリプト
+// JSに関して知識があまりないのでAIを使用しているところがございます。予めご了承ください。
 
 document.addEventListener('DOMContentLoaded', function() {
     

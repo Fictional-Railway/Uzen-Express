@@ -1,3 +1,5 @@
+// JSに関しては知識があまりないのでAIを使用しているところがございます。予めご了承ください。
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const navLinks = document.querySelectorAll('.nav-list a');
