@@ -185,3 +185,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+/* =========================================
+       ハンバーガーメニュー（スマホ用）
+       ========================================= */
+    const menuBtn = document.getElementById('js-menu-btn');
+    const nav = document.getElementById('js-nav');
+
+    if (menuBtn && nav) {
+        menuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            
+            // CSSアニメーション用のクラスを付け外しする
+            nav.classList.toggle('is-open');
+        });
+    }
+
+    /* =========================================
+       スムーズスクロール（該当部分のみ修正）
+       ========================================= */
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const headerOffset = 20; 
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+
+                // メニュー内のリンクを押した時に、メニューを閉じる処理
+                if (window.innerWidth < 768 && nav && nav.classList.contains('is-open')) {
+                    nav.classList.remove('is-open');
+                    menuBtn.classList.remove('active');
+                }
+            }
+        });
+    });

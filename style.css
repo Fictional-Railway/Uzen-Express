@@ -408,3 +408,70 @@ ul {
     font-size: 0.8rem; 
 }
 
+/* =========================================
+   変更部分：ヘッダーとナビゲーションのCSS
+   ========================================= */
+/* 既存の .site-header に2行追加します */
+.site-header { 
+    background-color: var(--white); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    position: relative; /* 追加：メニューが飛び出す基準位置にするため */
+    z-index: 100;       /* 追加：下のコンテンツより常に上に来るようにする */
+}
+
+/* 既存の .global-nav と @media (min-width: 768px) の部分を以下に差し替え */
+.global-nav { 
+    background-color: var(--primary-color); 
+    width: 100%; 
+    
+    /* ページに被さるように絶対配置にする */
+    position: absolute;
+    top: 100%; /* ヘッダーのすぐ下の位置 */
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* 重なっている感を出すために影をつける */
+
+    /* ふんわり下へ伸びるアニメーション設定 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* JSで追加される「開いた状態」のクラス */
+.global-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.global-nav a { 
+    display: block; color: var(--white); padding: 15px; font-weight: bold; font-size: 0.95rem; text-align: center; 
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* メニューの区切り線 */
+}
+.global-nav li:last-child a {
+    border-bottom: none;
+}
+.global-nav a:hover { 
+    background-color: rgba(255,255,255,0.15); 
+}
+
+/* PC表示時は被せるのを解除して横並びに戻す */
+@media (min-width: 768px) {
+    .global-nav { 
+        position: static; /* 絶対配置を解除 */
+        display: block !important; 
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+    }
+    .global-nav ul { 
+        display: flex; flex-direction: row; justify-content: center; 
+    }
+    .global-nav a { 
+        border-bottom: none; border-right: 1px solid rgba(255,255,255,0.2); padding: 12px 20px; 
+    }
+    .global-nav li:last-child a { 
+        border-right: none; 
+    }
+}
