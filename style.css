@@ -71,22 +71,47 @@ ul {
 .tagline { 
     font-size: 0.75rem; color: #888; margin-top: 2px; 
 }
-
+/* ナビゲーションの基本設定（スマホ版） */
 .global-nav { 
-    background-color: var(--primary-color); width: 100%; display: none; 
+    background-color: var(--primary-color); 
+    width: 100%; 
+    
+    /* ページに被さるように配置 */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+
+    /* 最初は隠しておく設定 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease; /* ここでアニメーションさせる */
 }
+
+/* メニューが開いた時の見た目 */
+.global-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* PC版の設定（768px以上） */
 @media (min-width: 768px) {
     .global-nav { 
-        display: block !important; 
+        position: static; 
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
     }
     .global-nav ul { 
         display: flex; flex-direction: row; justify-content: center; 
     }
     .global-nav a { 
         border-bottom: none; border-right: 1px solid rgba(255,255,255,0.2); padding: 12px 20px; 
-    }
-    .global-nav li:last-child a { 
-        border-right: none; 
     }
 }
 .global-nav a { 
@@ -455,23 +480,42 @@ ul {
     background-color: rgba(255,255,255,0.15); 
 }
 
-/* PC表示時は被せるのを解除して横並びに戻す */
+/* --- PC版（768px以上）でもハンバーガーを維持する設定 --- */
 @media (min-width: 768px) {
+    /* 1. ハンバーガーボタンを隠さず、表示し続ける */
+    .mobile-menu-btn { 
+        display: block; 
+    }
+
+    /* 2. メニューを横並びに戻さない（スマホと同じ「被さる形式」を維持） */
     .global-nav { 
-        position: static; /* 絶対配置を解除 */
-        display: block !important; 
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        display: block; /* 常に存在はさせるが... */
+        opacity: 0;      /* 透明にして隠す */
+        visibility: hidden; 
+        transform: translateY(-10px);
+    }
+
+    /* 3. ボタンを押して .is-open がついた時だけ表示する */
+    .global-nav.is-open {
         opacity: 1;
         visibility: visible;
-        transform: none;
-        box-shadow: none;
+        transform: translateY(0);
     }
+
+    /* 4. メニューの中身を縦並びにする */
     .global-nav ul { 
-        display: flex; flex-direction: row; justify-content: center; 
+        display: flex; 
+        flex-direction: column; /* 縦並び */
+        justify-content: flex-start; 
     }
+
+    /* 5. リンクの線を調整 */
     .global-nav a { 
-        border-bottom: none; border-right: 1px solid rgba(255,255,255,0.2); padding: 12px 20px; 
-    }
-    .global-nav li:last-child a { 
         border-right: none; 
+        border-bottom: 1px solid rgba(255,255,255,0.1); 
+        padding: 15px 20px; 
     }
 }
