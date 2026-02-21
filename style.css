@@ -187,6 +187,12 @@ ul {
 .status-text { 
     font-size: 1.2rem; font-weight: bold; color: #166534; display: block; margin-top: 5px; 
 }
+.status-text-notice { 
+    font-size: 1.2rem; font-weight: bold; color: #da641b; display: block; margin-top: 5px; 
+}
+.status-notice { 
+    flex: 1; min-width: 150px; background: #fdf6f0; border: 1px solid #f7dbbb; text-align: center; padding: 10px; border-radius: 4px; 
+}
 .unkojoho-footer { 
     display: flex; justify-content: space-between; font-size: 0.85rem; color: #888; 
 }
