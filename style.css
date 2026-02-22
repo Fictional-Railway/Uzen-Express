@@ -312,7 +312,7 @@ header {
         flex-direction: row; 
     } 
 }
-.vehicle-img, .vehicle-img2, .vehicle-img3, .vehicle-img4 { 
+.vehicle-img, .vehicle-img2, .vehicle-img3, .vehicle-img4, .vehicle-img5 { 
     position: relative; min-height: 180px; background-size: cover; background-position: center; width: 100%; 
 }
 .vehicle-img { 
