@@ -228,7 +228,6 @@ header {
         width: 28%; position: sticky; top: 20px; 
     }
 }
-
 .section { 
     background: var(--white); padding: 25px; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 30px; 
 }
@@ -349,6 +348,11 @@ header {
 
 .sidebar-box { 
     background: var(--white); border: 1px solid var(--border-color); padding: 20px; border-radius: 4px; 
+}
+
+.sidebar-box2 { 
+    background: var(--white); border: 1px solid var(--border-color); padding: 20px; border-radius: 4px; 
+    margin-top: 15px;
 }
 .sidebar-title { 
     font-size: 1.1rem; color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 15px; 
