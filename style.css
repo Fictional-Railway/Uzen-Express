@@ -619,3 +619,46 @@ header {
     padding: 10px 15px;
     text-align: center;
 }
+
+.stations div {
+    width: 100px;
+    text-align: center;
+    background-color: var(--bg-color);
+    border: var(--border-color) solid 2px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.lineblue {
+    border-bottom: #5B9BD5 solid 2px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.linegreen {
+    border-bottom: #70AD47 solid 2px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.lineorange {
+    border-bottom: #ED7D31 solid 2px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.linepurple {
+    border-bottom: #9108C8 solid 2px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+
