@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽前急行 - Uzen Express Railway -</title>
+    <meta name="description" content="山形と酒田を110分で結ぶ、夢の超特急。羽前急行電鉄の公式サイトです。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-main container">
+            <div class="logo">
+                <h1>
+                    <a href="./index.html"><img src="./image/uzen_logo_new_4-1.png" width="170px" style="margin: 0;" alt="羽前急行ロゴ"></a>
+                    <span class="logo-sub">羽前急行</span>
+                </h1>
+                <p class="tagline">Since 1996.1.31 - 山形と酒田を110分で結ぶ、夢の超特急。</p>
+            </div>
+        </div>
+        
+        <button class="mobile-menu-btn" id="js-menu-btn" aria-label="メニューを開く">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="global-nav" id="js-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#">運行情報</a></li>
+                    <li><a href="#timetable">時刻表・運賃</a></li>
+                    <li><a href="#">駅・路線図</a></li>
+                    <li><a href="#vehicles">車両案内・特急</a></li>
+                    <li><a href="#">お得なきっぷ・観光</a></li>
+                    <li><a href="#">企業・IR情報</a></li>
+                    <li><a href="#">安全への取り組み</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container main-layout">
+    <main class="main-content">
+        <br>
+        
+        <section>
+        <h2 class="section-title">運行情報</h2>
+        
+        <div class="unkojoho">
+            <div class="unkojoho-header">
+                <h2 class="section-title2"><i class="fas fa-train"></i> 現在の運行情報</h2>
+                <span id="js-current-time" class="unkojoho-time"></span>
+            </div>
+            <div class="alert-box">
+                <div class="status-normal">
+                    <p><i class="fa-solid fa-train" style=" margin-right: 5px;"></i>鉄道</p>
+                    <span class="status-text">平常運転</span>
+                </div>
+                <div class="status-notice">
+                    <p><i class="fa-solid fa-bus" style=" margin-right: 5px;"></i>バス</p>
+                    <span class="status-text-notice">一部運休</span>
+                </div>
+            </div>
+            <div class="unkojoho-footer">
+                <p class="copyright">※このページは自動で更新されません。</p>
+            </div>
+        </div>
+        </section>
+        <br>
+        <section class="section">
+            <h2 class="section-title">遅延証明書</h2>
+            <h3>掲載内容について</h3>
+            
+            <table class="keisai">
+				<tbody>
+                    <tr>
+                        <th>掲載条件</th>
+                        <td>羽前急行の対象路線で概ね5分以上遅れたもの。</td>
+                    </tr>
+                    <tr>
+                        <th>掲載時間</th>
+                        <td>当日の7時過ぎ、10時過ぎ、16時過ぎ、21時過ぎ、翌日午前2時過ぎに、各時間帯の遅延時間が確定後に、掲載を行います。</td>
+                    </tr>
+                    <tr>
+                        <th>履歴</th>
+                        <td>過去1週間が掲載されています。</td>
+                    </tr>
+                    <tr>
+                        <th>対象列車</th>
+                        <td>月山線の普通・快速・急行GREEN EXPRESSです。<br>※特急・深夜快速は対象外</td>
+                    </tr>
+				</tbody>
+			</table>
+
+        </section>
+
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h3 class="sidebar-title">関連リンク</h3>
+                <ul class="banner-list">
+                    <li><a href="#"><div class="dummy-banner bg-safety">安全報告書 2025</div></a></li>
+                    <li><a href="#"><div class="dummy-banner bg-ic">交通系ICカードのご案内</div></a></li>
+                    <li><a href="#"><div class="dummy-banner bg-goods">羽前急行オリジナルグッズ</div></a></li>
+                    <li><a href="#"><div class="dummy-banner bg-recruit">採用情報</div></a></li>    
+                    <li><a href="#"><div class="dummy-banner bg-conductorless">ワンマン運転列車の乗り方</div></a></li>
+                </ul>
+            </div>
+            
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">会社概要</a>
+                <a href="#">お問い合わせ</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイト利用規約</a>
+            </div>
+            <p class="copyright">Copyright &copy; 2025-2026 Uzen Express Railway All Rights Reserved.</p><br>
+            <p class="copyright"　style="font-size: 0.7rem; ">Production Cooperation: 𝙺𝚒𝚌𝚑𝚒𝚢𝚊</p><br>
+            <p class="copyright" style="font-size: 0.7rem;">
+                羽前急行電鉄は架空の創作物であり、実際には存在しません。実在の地名・鉄道会社名等が登場しますが、特定の実在の団体・企業等とは一切関係ありません。
+            </p>
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/bd992de36f.js" crossorigin="anonymous"></script>
+</body>
+</html>
