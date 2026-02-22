@@ -593,3 +593,25 @@ header {
 .keisai th{
     background: var(--bg-color);
 }
+
+.keisainaiyou {
+    margin-bottom: 10px;
+}
+
+.chien {
+    border-collapse: collapse;
+}
+
+.chien th,td {
+    border: var(--border-color) solid 1px;
+}
+
+.chien th{
+    background: var(--bg-color);
+    padding: 20px;
+}
+
+.chien td {
+    padding: 10px 15px;
+    text-align: center;
+}
