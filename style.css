@@ -352,7 +352,7 @@ header {
 
 .sidebar-box2 { 
     background: var(--white); border: 1px solid var(--border-color); padding: 20px; border-radius: 4px; 
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .sidebar-title { 
     font-size: 1.1rem; color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 15px; 
